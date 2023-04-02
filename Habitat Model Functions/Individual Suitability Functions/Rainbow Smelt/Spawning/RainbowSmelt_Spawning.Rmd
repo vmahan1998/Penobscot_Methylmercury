@@ -1,0 +1,199 @@
+---
+title: "Rainbow Smelt Spawning Suitability Indices"
+author: "Vanessa Mahan"
+date: "2023-04-01"
+output: html_document
+---
+#Depth
+```{r}
+#depth_range <- c(0.305,0.61)#in meters
+depth <- (0.305+1)/2 #average between min & max
+depth_suitability_curve <- function(depth) {
+  # Define the optimal range for depth
+  optimal_depth_range <- c(2, 4) # meters
+
+  # Define the lower and upper thresholds for depth
+  lower_threshold <- 0 # meters
+  upper_threshold <- 6 # meters
+
+  # Compute the habitat suitability score based on depth
+  if (depth < lower_threshold | depth > upper_threshold) {
+    suitability_score <- 0
+  } else if (depth >= optimal_depth_range[1] & depth <= optimal_depth_range[2]) {
+    suitability_score <- 1
+  } else if (depth < optimal_depth_range[1]) {
+    suitability_score <- (depth - lower_threshold) / (optimal_depth_range[1] - lower_threshold)
+  } else if (depth > optimal_depth_range[2]) {
+    suitability_score <- (upper_threshold - depth) / (upper_threshold - optimal_depth_range[2])
+  }
+
+  return(suitability_score)
+}
+plot_depth_suitability_curve <- function() {
+  # Define the range of depths to plot
+  depths <- seq(0, 20, by = 0.01)
+
+  # Compute the habitat suitability score for each depth value
+  suitability_scores <- sapply(depths, depth_suitability_curve)
+
+  # Plot the suitability scores as a curve
+  plot(depths, suitability_scores, type = "l", xlab = "Depth (meters)", ylab = "Habitat Suitability", ylim=c(0,1),
+       main = "Habitat Suitability Curve for Depth Parameter")
+}
+plot_depth_suitability_curve()
+```
+
+#Salinity
+```{r}
+#optimal Salinity range from 0.0psu-0.5psu
+Salinity <- (0+0.5)/2 #average between min & max
+salinity_suitability_curve <- function(Salinity,optimal_salinity_range) {
+  # Define the optimal range for Salinity
+  optimal_salinity_range <- c(0, 0.5) #psu
+
+  # Define the lower and upper thresholds for Salinity
+  lower_threshold <- 0 # psu
+  upper_threshold <- 1 # psu
+
+  # Compute the habitat suitability score based on Salinity
+  if (Salinity < lower_threshold | Salinity > upper_threshold) {
+    suitability_score <- 0
+  } else if (Salinity >= optimal_salinity_range[1] & Salinity <= optimal_salinity_range[2]) {
+    suitability_score <- 1
+  } else if (Salinity < optimal_salinity_range[1]) {
+    suitability_score <- (Salinity - lower_threshold) / (optimal_salinity_range[1] - lower_threshold)
+  } else if (Salinity > optimal_salinity_range[2]) {
+    suitability_score <- (upper_threshold - Salinity) / (upper_threshold - optimal_salinity_range[2])
+  }
+
+  return(suitability_score)
+}
+plot_salinity_suitability_curve <- function() {
+  # Define the range of Salinities to plot
+  Salinities <- seq(0, 30, by = 0.01)
+
+  # Compute the habitat suitability score for each depth value
+  suitability_scores <- sapply(Salinities, salinity_suitability_curve)
+
+  # Plot the suitability scores as a curve
+  plot(Salinities, suitability_scores, type = "l", xlab = "Salinity (psu)", ylab = "Habitat Suitability", ylim=c(0,1),
+       main = "Habitat Suitability Curve for Salinity Parameter")
+}
+plot_salinity_suitability_curve()
+```
+
+#Temperature
+```{r}
+#optimal temperature range from 0.0psu-0.5psu
+temperature <- (6+15)/2 #average between min & max
+temperature_suitability_curve <- function(temperature,optimal_temp_range) {
+  # Define the optimal range for temperature
+  optimal_temp_range <- c(4.4,10) #celcius
+
+  # Define the lower and upper thresholds for temperature
+  lower_threshold <- 0 # psu
+  upper_threshold <- 20 # psu
+
+  # Compute the habitat suitability score based on temperature
+  if (temperature < lower_threshold | temperature > upper_threshold) {
+    suitability_score <- 0
+  } else if (temperature >= optimal_temp_range[1] & temperature <= optimal_temp_range[2]) {
+    suitability_score <- 1
+  } else if (temperature < optimal_temp_range[1]) {
+    suitability_score <- (temperature - lower_threshold) / (optimal_temp_range[1] - lower_threshold)
+  } else if (temperature > optimal_temp_range[2]) {
+    suitability_score <- (upper_threshold - temperature) / (upper_threshold - optimal_temp_range[2])
+  }
+
+  return(suitability_score)
+}
+plot_temperature_suitability_curve <- function() {
+  # Define the range of temperature to plot
+  temps <- seq(0, 30, by = 0.01)
+
+  # Compute the habitat suitability score for each depth value
+  suitability_scores <- sapply(temps, temperature_suitability_curve)
+
+  # Plot the suitability scores as a curve
+  plot(temps, suitability_scores, type = "l", xlab = "Temperature (Celcius)", ylab = "Habitat Suitability", ylim=c(0,1),
+       main = "Habitat Suitability Curve for Temperature Parameter")
+}
+plot_temperature_suitability_curve()
+```
+
+#Minimum Flow Velocity
+```{r}
+#depth_range <- c(0.305,0.61)#in meters
+flow_velocity <- (0.3-0.9)/2 #average between min & max
+flow_velocity_suitability <- function(flow_velocity) {
+  # Define the optimal range for depth
+  optimal_velocity_range <- c(0.2, 0.4) # meters/second
+
+  # Define the lower and upper thresholds for depth
+  lower_threshold <- 0 # meters/second
+  upper_threshold <- 1 # meters/second
+
+  # Compute the habitat suitability score based on depth
+  if (flow_velocity < lower_threshold | flow_velocity > upper_threshold) {
+    suitability_score <- 0
+  } else if (flow_velocity >= optimal_velocity_range[1] & flow_velocity <= optimal_velocity_range[2]) {
+    suitability_score <- 1
+  } else if (flow_velocity < optimal_velocity_range[1]) {
+    suitability_score <- (flow_velocity - lower_threshold) / (optimal_velocity_range[1] - lower_threshold)
+  } else if (flow_velocity > optimal_velocity_range[2]) {
+    suitability_score <- (upper_threshold - flow_velocity) / (upper_threshold - optimal_velocity_range[2])
+  }
+
+  return(suitability_score)
+}
+plot_Velocity_suitability_curve <- function() {
+  # Define the range of depths to plot
+  velocities <- seq(0,3, by = 0.01)
+
+  # Compute the habitat suitability score for each depth value
+  suitability_scores <- sapply(velocities, flow_velocity_suitability)
+
+  # Plot the suitability scores as a curve
+  plot(velocities, suitability_scores, type = "l", xlab = "Velocities (meters/second)", ylab = "Habitat Suitability", ylim=c(0,1),
+       main = "Habitat Suitability Curve for Flow Velocity Parameter")
+}
+plot_Velocity_suitability_curve()
+```
+
+```{r}
+#depth_range <- c(0.305,0.61)#in meters
+SiltClay_per <- (0-0.1)/2 #average between min & max
+siltclay_suitability <- function(SiltClay_per) {
+  # Define the optimal range for depth
+  optimal_siltclay_range <- c(0.1, 0.4) # percent
+
+  # Define the lower and upper thresholds for silt clay percentage
+  lower_threshold <- 0 # meters/second
+  upper_threshold <- 1 # meters/second
+
+  # Compute the habitat suitability score based on depth
+  if (SiltClay_per < lower_threshold | SiltClay_per > upper_threshold) {
+    suitability_score <- 0
+  } else if (SiltClay_per >= optimal_siltclay_range[1] & SiltClay_per <= optimal_siltclay_range[2]) {
+    suitability_score <- 1
+  } else if (SiltClay_per < optimal_siltclay_range[1]) {
+    suitability_score <- (SiltClay_per - lower_threshold) / (optimal_siltclay_range[1] - lower_threshold)
+  } else if (SiltClay_per > optimal_siltclay_range[2]) {
+    suitability_score <- (upper_threshold - SiltClay_per) / (upper_threshold - optimal_siltclay_range[2])
+  }
+
+  return(suitability_score)
+}
+plot_SiltClay_suitability_curve <- function() {
+  # Define the range of depths to plot
+  siltclay_percentile <- seq(0,1, by = 0.01)
+
+  # Compute the habitat suitability score for each depth value
+  suitability_scores <- sapply(siltclay_percentile, siltclay_suitability)
+
+  # Plot the suitability scores as a curve
+  plot(siltclay_percentile, suitability_scores, type = "l", xlab = "Percent of Silt/Clay in Sediment (%)", ylab = "Habitat Suitability", ylim=c(0,1),
+       main = "Habitat Suitability Curve for Sediment Parameter")
+}
+plot_SiltClay_suitability_curve()
+```

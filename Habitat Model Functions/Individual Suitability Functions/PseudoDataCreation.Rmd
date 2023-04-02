@@ -1,0 +1,132 @@
+---
+title: "Pseudo-Data Compilations for Model Development"
+author: "Vanessa Mahan"
+date: "2023-04-01"
+output: html_document
+---
+```{r}
+library(terra)
+# Adjust the input and output paths according to your relevant folder paths
+path.input <- '/Users/RDEL1VMM/Documents/PhD Project Scoping/Tidal River Habitat Model/Geospatial Files/'
+path.output <- '/Users/RDEL1VMM/Documents/PhD Project Scoping/Tidal River Habitat Model/Geospatial Files/'
+
+# Project files in UTM Zone 18, NAD83-meters
+crsnad83 <- "+proj=utm +zone=18 +datum=NAD83 +units=m"
+```
+
+```{r}
+River_Area <- vect(paste0(path.input,("PenobscotRiverArea.shp")))
+```
+
+```{r setup, include=FALSE}
+library(raster)
+library(sf)
+
+# define the range of preferred values for each parameter
+depth_min <- 2
+depth_max <- 10
+salinity_pref <- 1
+temperature_min <- 15
+temperature_max <- 24
+flow_min <- 0.2
+flow_max <- 1.2
+suitable_sediment <- 0.7
+elevation_pref <- 0
+
+# define a function to calculate the habitat suitability index for each parameter
+hsi_depth <- function(depth) {
+  if (depth >= depth_min && depth <= depth_max) {
+    return((depth - depth_min) / (depth_max - depth_min))
+  } else {
+    return(0)
+  }
+}
+
+hsi_salinity <- function(salinity) {
+  if (salinity <= salinity_pref) {
+    return(1 - (abs(salinity - salinity_pref) / salinity_pref))
+  } else {
+    return(0)
+  }
+}
+
+hsi_temperature <- function(temperature) {
+  if (temperature >= temperature_min && temperature <= temperature_max) {
+    return(1 - (abs(temperature - ((temperature_min + temperature_max) / 2)) / ((temperature_max - temperature_min) / 2)))
+  } else {
+    return(0)
+  }
+}
+
+hsi_flow <- function(flow) {
+  if (flow >= flow_min && flow <= flow_max) {
+    return((flow - flow_min) / (flow_max - flow_min))
+  } else {
+    return(0)
+  }
+}
+
+hsi_sediment <- function(sediment_pct) {
+  if (sediment_pct >= suitable_sediment) {
+    return(1)
+  } else {
+    return(sediment_pct / suitable_sediment)
+  }
+}
+
+hsi_elevation <- function(elevation) {
+  if (elevation <= elevation_pref) {
+    return(1 - (abs(elevation - elevation_pref) / 10))
+  } else {
+    return(0)
+  }
+}
+
+# define a function to calculate the overall habitat suitability index
+calculate_hsi <- function(depth, salinity, temperature, flow, sediment_pct, elevation) {
+  hsi_depth_val <- hsi_depth(depth)
+  hsi_salinity_val <- hsi_salinity(salinity)
+  hsi_temperature_val <- hsi_temperature(temperature)
+  hsi_flow_val <- hsi_flow(flow)
+  hsi_sediment_val <- hsi_sediment(sediment_pct)
+  hsi_elevation_val <- hsi_elevation(elevation)
+  
+  return((hsi_depth_val + hsi_salinity_val + hsi_temperature_val + hsi_flow_val + hsi_sediment_val + hsi_elevation_val) / 6)
+}
+
+# load the shapefile of the study area
+study_area <- River_Area
+
+# set up the raster with the appropriate extent, resolution, and projection
+r <- raster(extent(study_area), ncol=100, nrow=100, crs=crs(study_area))
+res(r) <- 0.1
+
+# calculate the habitat suitability index for each cell in the raster
+hsis <- calc(r, function(x) {
+  depth <- runif(1, depth_min, depth_max)
+  salinity <- runif(1, 0, 2)
+  temperature <- runif(1, temperature_min, temperature_max)
+  flow <- runif(1, flow_min, flow_max)
+  sediment_pct <- runif(1, 0, 1)
+}
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
