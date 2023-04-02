@@ -1,5 +1,5 @@
 ---
-title: "Spawning of American Shad"
+title: "American Shad Spawning Suitability Indices"
 author: "Vanessa Mahan"
 date: "2023-04-01"
 output: html_document
@@ -41,6 +41,7 @@ plot_depth_suitability_curve <- function() {
 }
 plot_depth_suitability_curve()
 ```
+
 ```{r}
 #optimal Salinity range from 0.0psu-0.5psu
 Salinity <- (0.5+5)/2 #average between min & max
@@ -50,7 +51,7 @@ salinity_suitability_curve <- function(Salinity,optimal_salinity_range) {
 
   # Define the lower and upper thresholds for Salinity
   lower_threshold <- 0 # psu
-  upper_threshold <- 7 # psu
+  upper_threshold <- 10 # psu
 
   # Compute the habitat suitability score based on Salinity
   if (Salinity < lower_threshold | Salinity > upper_threshold) {
@@ -78,16 +79,17 @@ plot_salinity_suitability_curve <- function() {
 }
 plot_salinity_suitability_curve()
 ```
+
 ```{r}
 #optimal temperature range from 0.0psu-0.5psu
 temperature <- (6+15)/2 #average between min & max
 temperature_suitability_curve <- function(temperature,optimal_temp_range) {
   # Define the optimal range for temperature
-  optimal_temp_range <- c(16,20) #celcius
+  optimal_temp_range <- c(12,18) #celcius
 
   # Define the lower and upper thresholds for temperature
-  lower_threshold <- 15 # psu
-  upper_threshold <- 24 # psu
+  lower_threshold <- 10 # psu
+  upper_threshold <- 20 # psu
 
   # Compute the habitat suitability score based on temperature
   if (temperature < lower_threshold | temperature > upper_threshold) {
@@ -121,11 +123,11 @@ plot_temperature_suitability_curve()
 flow_velocity <- (0.3-0.5)/2 #average between min & max
 flow_velocity_suitability <- function(flow_velocity) {
   # Define the optimal range for depth
-  optimal_velocity_range <- c(0.3, 0.5) # meters/second
+  optimal_velocity_range <- c(0.3, 0.6) # meters/second
 
   # Define the lower and upper thresholds for depth
-  lower_threshold <- 0.2 # meters/second
-  upper_threshold <- 0.7 # meters/second
+  lower_threshold <- 0 # meters/second
+  upper_threshold <- 1 # meters/second
 
   # Compute the habitat suitability score based on depth
   if (flow_velocity < lower_threshold | flow_velocity > upper_threshold) {
@@ -159,11 +161,11 @@ plot_Velocity_suitability_curve()
 SiltClay_per <- (0-0.2)/2 #average between min & max
 siltclay_suitability <- function(SiltClay_per) {
   # Define the optimal range for depth
-  optimal_siltclay_range <- c(0, 0.2) # percent
+  optimal_siltclay_range <- c(0, 0.3) # percent
 
   # Define the lower and upper thresholds for silt clay percentage
   lower_threshold <- 0 # meters/second
-  upper_threshold <- 0.3 # meters/second
+  upper_threshold <- 1 # meters/second
 
   # Compute the habitat suitability score based on depth
   if (SiltClay_per < lower_threshold | SiltClay_per > upper_threshold) {
