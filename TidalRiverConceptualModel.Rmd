@@ -1,0 +1,422 @@
+---
+title: "Model Processing Steps"
+author: "Vanessa Mahan"
+date: "2023-03-28"
+output: html_document
+---
+#Hydrodynamic Model Processing Steps
+
+Outputs of this model: turbidity maximum, salinity, temperature, methylmercury concentration, minimum flow velocity, and depth.
+
+#Habitat Model Processing Steps
+
+Additional Inputs:
+clay/silt percentage, elevation, and proximity to freshwater streams.
+
+The first step to creating the model is to outline habitat preference parameters for each fish species by age group. 
+
+Species include: alewives (Alosa psuedoharengus), American eels (Anguilla rostrata), American shad (A. sapidissima), Atlantic salmon, Atlantic sturgeon (Acipenser oxyrinchus), shortnose sturgeon (Acipenser brevirostrum), blueback herring (A. aestivalis), rainbow smelt (Osmerus mordax), and striped bass (Morone saxatillis).
+
+The next step is to adopt and adapt any accepted or documented HSI models for the existing parameters.(FWS) Create representative suitability curves for validation. Cite all sources carefully and document assumptions made about parameters.
+
+
+#Alewives
+
+##Spawning
+
+###Salinity
+sal.spwn <- c(0,5,12,14,25,30) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,0,0)
+
+###Temperature
+wtr.temp.spwn <- c(5,10,15,20,27,30) #adopted from existing Fish & Wildlife model
+wtr.temp.spwn.SIV <- c(0,0,1,1,0,0)
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+depth.spwn <-c(0,150,200,300,500) ##mm
+depth.spwn.SIV <- c(0,1,1,1,0)
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+
+###Salinity
+sal.juv <- c(0,5,12,14,25,30) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,1,1,0,0)
+
+###Temperature Celcius
+tmp.juv <- c(0,5,15,20,30,40) #adopted from existing Fish & Wildlife model
+tmp.juv.SIV <- c(0,0.2,1,1,0.2,0)
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#American eels
+
+##Spawning
+
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+
+###Salinity
+sal.juv <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#American Shad
+
+##Spawning
+
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,NA,NA)
+
+###Temperature
+tmp.spwn <- c(0,7.5,14,20,26,30) #adopted from existing Fish & Wildlife model
+tmp.spwn.SIV <- c(0,0,1,1,0,0)
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity m/s
+vel.spwn <- c(0,0.25,0.4,0.6,0.8,1.2) #A Bayesian Spawning Habitat Suitability Model for
+American Shad in Southeastern United States Rivers Fish & Wildlife model
+vel.spwn.SIV <-c(0,1,1,1,1,0)
+
+###depth
+depth.spwn <- c(0,1.5,2.5,4.5,6.5,8.5,10.5)
+depth.spwn.SIV <- (0,1,1,0.8,0.5,0.2,0)
+
+###Silt/clay Percentage
+sub.spwn <- (0,20,40,60,80,100) #lower sand/silt percentage would indicated more cobblestone substrate available
+sub.spwn.SIV <- (1,0.8,0.6,0.4,0.2,0)
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+
+###Salinity
+sal.juv <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,0,0,NA,NA)
+
+###Temperature
+tmp.juv <- c(0.0,2.25,10.0,25.0,35.0,40.0)
+tmp.juv.SIV <- c(0,0,1,1,0,0)
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#Atlantic Salmon
+
+##Spawning
+
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+
+###Salinity
+sal.juv <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#Atlantic Sturgeon
+
+##Spawning
+
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,1,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+
+###Salinity
+sal.juv <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#Shortnose Sturgeon
+
+##Spawning
+
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,NA,NA)
+
+###Temperature
+tmp.spwn <- c(0,7.2,10,16,18,40)
+tmp.spwn.SIV <- c(0,0,1,1,0,0)
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity cmps
+vel.spwn <- c(0,30,76,152,160)
+vel.spwn.SIV <- c(0,1,1,0,0)
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+
+###Salinity
+sal.juv <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,0,0,NA,NA)
+
+###Temperature
+temp.juv <- c(0,8,11,22,35)
+tmp.juv.SIV <- c(0,0,1,1,0)
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+vel.juv <- c(0,15,45,152,160)
+vel.juv.SIV <- c(0.8,1.0,1.0,0,0)
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#Blueback herring
+
+##Spawning
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,NA,NA)
+
+###Temperature
+tmp.spwn <- c(12,14,20,24,27,28)
+tmp.spwn.SIV <- c(0,0,1,1,0,0)
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+
+###Salinity
+sal.juv <- c(0,5,12,14,25,30)
+sal.juv.SIV <-c(0,1,0,0,0,0,)
+
+###Temperature
+tmp.juv <- c(0,10,20,30,35,40)
+tmp.juv.SIV <- c(0,0,1,1,0,0)
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#Rainbow smelt
+
+##Spawning
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+###Salinity
+sal.juv <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+#Striped bass
+
+##Spawning
+###Salinity
+sal.spwn <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.spwn.SIV <- c(1,0,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams
+
+##Juvinile
+###Salinity
+sal.juv <- c(0,5,12,14,NA,NA) #adopted from existing Fish & Wildlife model
+sal.juv.SIV <- c(0,1,0,0,NA,NA)
+
+###Temperature
+
+###Turbidity Maximum
+
+###Minimum Flow Velocity
+
+###depth
+
+###Silt/clay Percentage
+
+###elevation
+
+###proximity to freshwater streams

@@ -1,0 +1,127 @@
+---
+title: "HSI Model Scoping"
+author: "Vanessa Mahan"
+date: "2023-03-27"
+output: html_document
+---
+```{r}
+library(caret)
+library(ellipse)
+data(iris)
+data <- iris
+```
+
+```{r}
+##load your own dataset
+filename <- "iris.csv"
+data <- read.csv(filename, header=FALSE)
+```
+
+```{r}
+#create a list of 8-% of the rows in the original dataset to use for trainng
+validation_index <- createDataPartition(data$Species, p=0.80, list=FALSE)
+# Select 20% of the data for validation
+validation <-data[-validation_index,]
+# use the remaining 80% of data to reainng and testing the models
+data <- data[validation_index,]
+```
+
+```{r}
+# summarize dataset
+#dimensions
+dim(data)
+#types of attributes
+sapply(data, class)
+#data
+head(data)
+#list the levels for the class
+levels(data$Species)
+#number of rows in each class
+percentage <-prop.table(table(data$Species))*100
+cbind(freq=table(data$Species),percentage=percentage)
+#summarize attribute distributions
+summary(data)
+```
+
+```{r}
+#Visualize data
+##split input and output
+x <- data[,1:4]
+y <- data[,5]
+
+#create boxplot for each attribute on one image
+par(mfrow=c(1,4))
+  for(i in 1:4){
+    boxplot(x[,i], main=names(iris)[i])
+  }
+#barplot for class breakdown
+plot(y)
+#scatterplot matrix
+featurePlot(x=x,y=y, plot="ellipse")
+#box and whisker plots
+featurePlot(x=x,y=y, plot="box")
+#density plots for each attribute by class value
+scales <-list(x=list(relation="free"),y=list(relation="free"))
+featurePlot(x=x,y=y,plot="density",scales=scales)
+```
+
+```{r}
+#run algorithms using 10-fold cross validation
+control <- trainControl(method="cv",number = 10)
+metric <- "Accuracy"
+```
+
+```{r}
+#Evaluate algorithms to use
+set.seed(7)
+#linear algorithms
+fit.lda <-train(Species~., data=data,method="lda",metric=metric, trControl=control)
+#nonlinear algorithms
+#CART
+fit.cart<-train(Species~., data=data,method="rpart",metric=metric, trControl= control)
+#kNN
+set.seed(7)
+fit.knn <- train(Species~.,data=data, method="knn",metric=metric,trControl=control)
+#advanced algorithms 
+#SVM
+set.seed(7)
+fit.svm <- train(Species~.,data=data, method="svmRadial",metric=metric, trControl=control)
+# Random Forest
+set.seed(7)
+fit.rf<-train(Species~.,data=data,methods="rf",metric=metric,trControl=control)
+```
+
+```{r}
+#summarize the accuracy of models
+results <- resamples(list(lda=fit.lda,cart=fit.cart,knn=fit.knn, svm=fit.svm, rf=fit.rf))
+summary(results)
+```
+
+```{r}
+dotplot(results)
+```
+
+```{r}
+print(fit.cart)
+```
+
+```{r}
+predictions <- predict(fit.cart, validation)
+confusionMatrix(predictions,validation$Species)
+```
+
+# Habitat Selection
+```{r}
+library(knitr)
+library(tidyverse)
+install.packages("amt")
+library(amt)
+library(broom)
+```
+```{r, data_amt}
+amt_fisher <- read.csv("fisher_data.csv")
+fisher <- amt_fisher
+landuse <- amt_fisher_covar$landuse
+elevation <- amt_fisher_covar$elevation
+popden <- amt_fisher_covar$popden
+```

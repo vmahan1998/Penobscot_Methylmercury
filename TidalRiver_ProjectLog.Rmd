@@ -1,0 +1,99 @@
+---
+title: "Tidal River Model Research Log"
+author: "Vanessa Mahan"
+date: "2023-03-28"
+output: html_document
+---
+This document will act as a log as I document my research process and questions that come up in relation to the project. This document contains was and unfinished data and calculations remain in progress.
+
+The research project involves using a coupled-model approach to quanitify the geographic range and quality of fish habitat within the Penobscot River as it related to methylmercury contamination. The goal of this project is to use hydrodynamic variables to determine areas of preferred habitat by diadromous fish species for spawning and juvenile rearing. 
+
+One of the first steps in model development is to identify what data is needed to input into the model.
+
+Hydrodynamic Input Parameters
+
+- Salinity Tracer
+- Methylmercury Tracer
+- Surface Temperature
+- Bathymetry
+- Elevation
+- Hydrology information
+
+Hydrodynamic Output Parameters
+
+- Salinity
+- Temperature
+- Minimum Flow Velocity
+- Tubidity Maximum
+- Methylmercury Concentrations
+- depth
+
+Additional Ecological Parameters
+
+- Substrate Type (silt/clay percentage)
+- SAV (sub-aquatic Vegetation)
+- Elevation
+- Vegetation
+
+There are several species of interest for the study area:
+- Alewives
+- American Eels
+- American Shad
+- Atlantic Salmon
+- Atlantic Sturgeon
+- Shortnose Sturgeon
+- Blueback Herring
+- Rainbow Smelt
+- Striped Bass
+
+Some Habitat suitability indicies already exist. Suitability curves should be adopted and adapted when avaiable from a certified source
+
+Includes:
+- Alewives
+- American Shad
+- Atlantic Sturgeon
+- Atlantic Salmon
+- Shortnose Sturgeon
+- Blueback Herring
+
+The next step is to define suitability indicies for each species of interest for available parameters. Additional soecies-specific parameters may be identified in this step. Listed here are existing sources for habitat preferences by species of interest. This will also help identify gaps in the research pertaining to habitat preferences of each species.
+
+- Alewives
+- American Eels
+- American Shad
+- Atlantic Salmon
+- Atlantic Sturgeon
+- Shortnose Sturgeon
+- Blueback Herring
+- Rainbow Smelt
+- Striped Bass
+
+Any areas where field work or sampling needs to be done?
+
+
+## Suitability Curves by Species
+
+### Alewives
+
+### American Eels
+
+### American Shad
+
+### Atlantic Sturgeon
+
+### Atlantic Salmon
+
+### Shortnose Sturgeonc
+
+### Blueback Herring
+
+### Rainbow Smelt
+
+### Stiped Bass
+
+## Additonal Data Sources
+
+### Substrate Data Source
+
+### Vegetation Data Source
+

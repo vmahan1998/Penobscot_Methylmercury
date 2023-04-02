@@ -1,0 +1,116 @@
+---
+title: "Tidal River Habitat Model Notes_12_16_2022"
+author: "Vanessa Mahan"
+date: "2022-12-16"
+output: html_document
+---
+# Scoping Notes
+https://desktop.arcgis.com/en/analytics/case-studies/understanding-the-suitability-modeling-workflow.htm
+
+Hydrodynamic tracer model for mercury in the Penobscot River
+Hydrodynamic Outputs:
+2D Sediment transport with mike/telemac 
+
+- sediment
+
+
+- Salinity
+- Water Level Duration
+- Mercury Amount and Decay from initial input?
+- Water Temperature
+
+Habitat Suitability Inputs:
+
+- Salinity
+- Water Levels
+- Mercury
+- Water Temperature
+- Elevation
+- Vegetation Coverage
+- Canopy Coverage (data?)
+- Grain Size clay/sediment percentage
+
+Predict Habitat 
+## Season? 
+- Spring/Summer
+  - Spring bloom
+  
+- Fall/Winter
+  - Ice Changes
+
+Use water temperature observations
+
+
+## Modeled Habitats
+
+### Freshwater Tidal River
+- mudflat
+- low marsh
+- high marsh
+- forest
+- soft bottom habitat
+- hard bottom habitat
+
+Elevation
+Salinity
+Vegetation coverage and type
+Substrate type
+
+### Estuarine Intertidal River
+- mudflat
+- low tidal marsh
+- high tidal marsh
+- tidal forest
+- soft bottom habitat
+- hard bottom habitat
+
+Elevation
+Salinity
+Vegetation Coverage and type
+Substrate type
+
+  
+## Modeled Metrics
+- Mercury Content Habitat Suitability
+
+- Sturgeon Habitat Suitability
+  - grad student
+- Salmon Habitat Suitability
+  - Justin Stevens
+- Sea-run fish Habitat Suitability
+  - Justin Stevens
+dimersal & pelagic 
+- flounder
+
+
+
+Define Parameters of Habitat 
+
+#Rearing Habitat
+
+## Atlantic Salmon
+- Velocity
+- Relative Depth 
+- Grain Size
+- Salinity
+- Temperature
+
+### References
+Guay, J. C., Boisclair, D., Rioux, D., Leclerc, M., Lapointe, M., & Legendre, P. (2000). Development and validation of numerical habitat models for juveniles of Atlantic salmon ( Salmo salar ). Canadian Journal of Fisheries and Aquatic Sciences, 57(10), 2065–2075. https://doi.org/10.1139/f00-162
+
+## Atlantic Sturgeon
+
+## Shortnose Sturgeon
+
+## Sea-Run
+
+#Juvenile Habitat
+
+## Atlantic Salmon
+
+## Atlantic Sturgeon
+
+## Shortnose Sturgeon
+
+## Sea-Run
+

@@ -1,0 +1,68 @@
+---
+title: "HSI Preliminary Results"
+author: "Vanessa Mahan"
+date: "2023-02-28"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r echo=FALSE, fig.width=8, fig.height=8, fig.cap="Suitability index curves for Atlantic Salmon Spawning Habitat."}
+#Create data frame with freshwater tidal submodel
+NYBEM.fresh.tid <- data.frame(matrix(NA,nrow=4,ncol=6))
+colnames(NYBEM.fresh.tid) <- c("salinity.per", "salinity.SIV", "siltclay.per", "siltclay.SIV", 
+                             "depth", "depth.SIV")
+NYBEM.fresh.tid$salinity.per <- c(0, 20, 100, NA)
+NYBEM.fresh.tid$salinity.SIV <- c(1, 0, 0, NA)
+NYBEM.fresh.tid$siltclay.per <- c(0, 40, 60, 100) ##Silt/clay percentage
+NYBEM.fresh.tid$siltclay.SIV <- c(0.1, 0.5, 0.7, 1)
+NYBEM.fresh.tid$depth <- c(0, 4, 6, 20) #depths 
+NYBEM.fresh.tid$depth.SIV <- c(0, 1, 1, 0)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,2), cex=1.0)
+
+  #salinity.per
+  plot(NYBEM.fresh.tid$salinity.per, NYBEM.fresh.tid$salinity.SIV, xlim=c(0,100), ylim=c(0,1), type="l",
+       xlab="Salinity duration (%time greater than 0.5 psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(NYBEM.fresh.tid$salinity.per, NYBEM.fresh.tid$salinity.SIV, pch=19, cex=2)
+  lines(NYBEM.fresh.tid$salinity.per, NYBEM.fresh.tid$salinity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(NYBEM.fresh.tid$siltclay.per, NYBEM.fresh.tid$siltclay.SIV, xlim=c(0,100), ylim=c(0,1), type="l",
+       xlab="Silt/Clay (%)", ylab="Suitability Index (siltclay.per)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(NYBEM.fresh.tid$siltclay.per, NYBEM.fresh.tid$siltclay.SIV, pch=19, cex=2)
+  lines(NYBEM.fresh.tid$siltclay.per, NYBEM.fresh.tid$siltclay.SIV, lwd=3)
+  
+  #depth
+  plot(NYBEM.fresh.tid$depth, NYBEM.fresh.tid$depth.SIV, xlim=c(0,25), ylim=c(0,1), type="l",
+       xlab="Relative Depth", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(NYBEM.fresh.tid$depth, NYBEM.fresh.tid$depth.SIV, pch=19, cex=2)
+  lines(NYBEM.fresh.tid$depth, NYBEM.fresh.tid$depth.SIV, lwd=3)
+  
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

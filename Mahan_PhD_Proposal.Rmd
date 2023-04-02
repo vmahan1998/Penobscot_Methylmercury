@@ -1,0 +1,42 @@
+---
+title: "Using a Coupled Model Approach to Predict Concentrations of Organic Mercury and Quantify the Impact on Fish Habitat for Penobscot River"
+author: "Vanessa Mahan"
+date: "2023-02-22"
+output: html_document
+---
+
+# Dissertation Proposal
+###Canidate
+Vanessa Mahan
+_School of Marine Sciences_
+_University of Maine_
+
+###Committee
+Dr. Kimberly Huguenard, Chair, _University of Maine_
+Dr. Gayle Zydlewski, _University of Maine_
+Dr. Damien Brady, _University of Maine_
+Dr. Steven Kyle McKay, _Army Corps of Engineers_
+Justin Stevens, _NOAA SeaGrant_
+
+## Abstract
+
+Tidal rivers are an important habitat that support anadromous fish species, species that relies on freshwater and saltwater to complete their lifecycle, and contamination of these habitats poses a risk to the health of fish populations. The Penobscot River, located in Maine, is classified as designated Critical Habitat for endangered species like Atlantic Sturgeon, Shortnose Sturgeon, and Atlantic Salmon as well as provides habitat for various sea-run fish species. Numerous environmental assessments were performed after the river became polluted with methylmercury during the operation of a chloride alkaline manufacturing plant between the years of 1967-2000, but tidal processes overtime have changed the concentration and range of methylmercury throughout the river and coupled modeling approaches are needed to uncover areas of potential fish habitat with high concentrations of methylmercury. 
+
+The first task is evaluate physical environmental conditions using a hydrodynamic model with sediment loading and transport as a proxy input for methylmercury concentrations. 
+
+
+The second task is to predict habitat range based on lifecycle needs for Atlantic Sturgeon, Shortnose Sturgeon, Atlantic Salmon, and sea-run fish. Absence and presence of habitat will based on an index of probability for habitat suitability. 
+
+
+The third task is to apply the coupled modeled approach for sea-level rise scenarios. The goal of this assessment is to predict changes in the methlymercury concentrations and fish habitat as a result of sea-level rise.
+
+## Introduction
+
+## Research Tasks
+
+## Preliminary Results
+- habitat model?
+- 
+## Dissertation Timeline
+
+## References

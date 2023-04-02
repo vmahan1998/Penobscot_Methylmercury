@@ -1,0 +1,62 @@
+---
+title: "Hydrodynamic Model Notes 1_27_2023"
+author: "Vanessa Mahan"
+date: "2023-01-27"
+output: html_document
+---
+```{r}
+install.packages('data.tree')
+library(data.tree)
+install.packages("DiagrammeR")
+library(DiagrammeR)
+```
+
+# HEC-RAS & WASP Coupled Hydrodynamic Model
+```{r}
+
+PTRM <- Node$new("PTRM Components")
+  Hydrodynamic <- PTRM$AddChild("Hydrodynamic")
+    'HEC_RAS' <- Hydrodynamic$AddChild("HEC_RAS")
+    WASP <- Hydrodynamic$AddChild("WASP")
+    
+    inputs <- WASP$AddChild("Inputs")
+    volume <- inputs$AddChild("Water Volume")
+    depth <- inputs$AddChild("Depth")
+    velocity <- inputs$AddChild("Water Velocity")
+    flow <- inputs$AddChild("Interfacial Flow")
+    
+    outputs <- WASP$AddChild("Outputs")
+    Hg <- outputs$AddChild("Mercury Concentration")
+    
+    inputs <- HEC_RAS$AddChild("Inputs")
+    outputs <- HEC_RAS$AddChild("Outputs")
+    
+    
+  Habitat <- PTRM$AddChild("Habitat")
+    type <- Habitat$AddChild("Habitat Type")
+    HSI <- Habitat$AddChild("HSI")
+    
+    mudflat <- type$AddChild("Mudflat")
+    L_marsh <- type$AddChild("Low Marsh")
+    h_marsh <- type$AddChild("High Marsh")
+    t_forest <- type$AddChild("Tidal Forest")
+    forest <- type$AddChild("Forest")
+    h_marsh <- type$AddChild("High Marsh")
+    soft_hab <- type$AddChild("Soft Substrate")
+    hard_hab <- type$AddChild("Hard Substrate")
+    
+    
+    salmon <- HSI$AddChild("Atlantic Salmon")
+    sturgeon <- HSI$AddChild("Atlantic Sturgeon")
+    sea_run <- HSI$AddChild("Sea Run Fish")
+    Hg <- HSI$AddChild("Mercury")
+    
+    
+print(PTRM)
+
+```
+
+## HEC-RAS 
+
+## WASP
+
