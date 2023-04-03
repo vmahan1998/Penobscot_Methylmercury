@@ -4,16 +4,18 @@ author: "Vanessa Mahan"
 date: "2023-04-01"
 output: html_document
 ---
+## Depth
+American shad are found to spawn over all depths of the river but are found most often from 0.45-12.2 meters (Stier & Crance, 1985). 
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
 depth <- (0.305+1)/2 #average between min & max
 depth_suitability_curve <- function(depth) {
   # Define the optimal range for depth
-  optimal_depth_range <- c(1.5, 3) # meters
+  optimal_depth_range <- c(0.45, 12.2) # meters
 
   # Define the lower and upper thresholds for depth
-  lower_threshold <- 1 # meters
-  upper_threshold <- 5 # meters
+  lower_threshold <- 0 # meters
+  upper_threshold <- 20 # meters
 
   # Compute the habitat suitability score based on depth
   if (depth < lower_threshold | depth > upper_threshold) {
@@ -41,7 +43,9 @@ plot_depth_suitability_curve <- function() {
 }
 plot_depth_suitability_curve()
 ```
+## Salinity
 
+American Shad spawn only in freshwater, but have ahigher tolerance and ability to acclimate to higher concentrations of salinity (Stier & Crance, 1985)
 ```{r}
 #optimal Salinity range from 0.0psu-0.5psu
 Salinity <- (0.5+5)/2 #average between min & max
@@ -51,7 +55,7 @@ salinity_suitability_curve <- function(Salinity,optimal_salinity_range) {
 
   # Define the lower and upper thresholds for Salinity
   lower_threshold <- 0 # psu
-  upper_threshold <- 10 # psu
+  upper_threshold <- 15 # psu
 
   # Compute the habitat suitability score based on Salinity
   if (Salinity < lower_threshold | Salinity > upper_threshold) {
@@ -79,17 +83,18 @@ plot_salinity_suitability_curve <- function() {
 }
 plot_salinity_suitability_curve()
 ```
-
+## Temperature
+Temperture for spawning around 8-26 degrees celcius with optimal levels of 14-21 degrees celcius (Stier & Crance, 1985). 
 ```{r}
 #optimal temperature range from 0.0psu-0.5psu
 temperature <- (6+15)/2 #average between min & max
 temperature_suitability_curve <- function(temperature,optimal_temp_range) {
   # Define the optimal range for temperature
-  optimal_temp_range <- c(12,18) #celcius
+  optimal_temp_range <- c(14,21) #celcius
 
   # Define the lower and upper thresholds for temperature
-  lower_threshold <- 10 # psu
-  upper_threshold <- 20 # psu
+  lower_threshold <- 8 # psu
+  upper_threshold <- 26 # psu
 
   # Compute the habitat suitability score based on temperature
   if (temperature < lower_threshold | temperature > upper_threshold) {
@@ -117,17 +122,18 @@ plot_temperature_suitability_curve <- function() {
 }
 plot_temperature_suitability_curve()
 ```
-
+## Flow Velocity
+Flow velocity was documented as 9.1-132 cm/s with optimal levels around 30.5-91.4 cm/s (Stier & Crance, 1985). Upper and lower limit invalidated to match (Ross et al., 1993). 
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
 flow_velocity <- (0.3-0.5)/2 #average between min & max
 flow_velocity_suitability <- function(flow_velocity) {
   # Define the optimal range for depth
-  optimal_velocity_range <- c(0.3, 0.6) # meters/second
+  optimal_velocity_range <- c(0, 0.7) # meters/second
 
   # Define the lower and upper thresholds for depth
   lower_threshold <- 0 # meters/second
-  upper_threshold <- 1 # meters/second
+  upper_threshold <- 1.32 # meters/second
 
   # Compute the habitat suitability score based on depth
   if (flow_velocity < lower_threshold | flow_velocity > upper_threshold) {

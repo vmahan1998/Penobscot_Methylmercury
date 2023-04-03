@@ -4,19 +4,18 @@ author: "Vanessa Mahan"
 date: "2023-04-01"
 output: html_document
 ---
-References for Depth Metric
-(Pardue, 1983)
+## Depth
 
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
 depth <- (0.305+1)/2 #average between min & max
 depth_suitability_curve <- function(depth) {
   # Define the optimal range for depth
-  optimal_depth_range <- c(0.3, 1) # meters
+  optimal_depth_range <- c(0.5, 2) # meters
 
   # Define the lower and upper thresholds for depth
   lower_threshold <- 0 # meters
-  upper_threshold <- 3 # meters
+  upper_threshold <- 10 # meters
 
   # Compute the habitat suitability score based on depth
   if (depth < lower_threshold | depth > upper_threshold) {
@@ -44,18 +43,18 @@ plot_depth_suitability_curve <- function() {
 }
 plot_depth_suitability_curve()
 ```
-References for Salinity Metric
-(Pardue, 1983)
+## Salinity
+
 ```{r}
 #optimal Salinity range from 0.0psu-0.5psu
 Salinity <- (0+0.5)/2 #average between min & max
 salinity_suitability_curve <- function(Salinity,optimal_salinity_range) {
   # Define the optimal range for Salinity
-  optimal_salinity_range <- c(0, 0.5) #psu
+  optimal_salinity_range <- c(5, 10) #psu
 
   # Define the lower and upper thresholds for Salinity
   lower_threshold <- 0 # psu
-  upper_threshold <- 5 # psu
+  upper_threshold <- 25 # psu
 
   # Compute the habitat suitability score based on Salinity
   if (Salinity < lower_threshold | Salinity > upper_threshold) {
@@ -83,8 +82,8 @@ plot_salinity_suitability_curve <- function() {
 }
 plot_salinity_suitability_curve()
 ```
-References for Temperature Metric
-(Pardue, 1983) no hatching success past 29.7
+## Temperature
+
 ```{r}
 #optimal temperature range from 0.0psu-0.5psu
 temperature <- (6+15)/2 #average between min & max
@@ -93,8 +92,8 @@ temperature_suitability_curve <- function(temperature,optimal_temp_range) {
   optimal_temp_range <- c(15,20) #celcius
 
   # Define the lower and upper thresholds for temperature
-  lower_threshold <- 0 # psu
-  upper_threshold <- 30 # psu
+  lower_threshold <- 10 # psu
+  upper_threshold <- 20 # psu
 
   # Compute the habitat suitability score based on temperature
   if (temperature < lower_threshold | temperature > upper_threshold) {
@@ -122,17 +121,18 @@ plot_temperature_suitability_curve <- function() {
 }
 plot_temperature_suitability_curve()
 ```
+## Flow Velocity
 
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
 flow_velocity <- (0.3-0.9)/2 #average between min & max
 flow_velocity_suitability <- function(flow_velocity) {
   # Define the optimal range for depth
-  optimal_velocity_range <- c(0.1, 0.3) # meters/second
+  optimal_velocity_range <- c(0, 0.3) # meters/second
 
   # Define the lower and upper thresholds for depth
   lower_threshold <- 0 # meters/second
-  upper_threshold <- 1.0 # meters/second
+  upper_threshold <- 0.5 # meters/second
 
   # Compute the habitat suitability score based on depth
   if (flow_velocity < lower_threshold | flow_velocity > upper_threshold) {
@@ -160,14 +160,14 @@ plot_Velocity_suitability_curve <- function() {
 }
 plot_Velocity_suitability_curve()
 ```
-References for Silt\Clay Metric
-(Pardue, 1983)
+## Silt/Clay Percentage
+
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
 SiltClay_per <- (0-0.1)/2 #average between min & max
 siltclay_suitability <- function(SiltClay_per) {
   # Define the optimal range for depth
-  optimal_siltclay_range <- c(0, 0.2) # percent
+  optimal_siltclay_range <- c(0, 0.1) # percent
 
   # Define the lower and upper thresholds for silt clay percentage
   lower_threshold <- 0 # meters/second
@@ -199,3 +199,4 @@ plot_SiltClay_suitability_curve <- function() {
 }
 plot_SiltClay_suitability_curve()
 ```
+# Turbidity

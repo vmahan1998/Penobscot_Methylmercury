@@ -4,16 +4,20 @@ author: "Vanessa Mahan"
 date: "2023-04-01"
 output: html_document
 ---
+US FWS model:American Shad (Stier & Crance, 1985)
+
+## Depth
+Maximum suitability of habitat for juvenile American Shad was measured at 0-1.5 meters deep (Ross et al., 1997). 
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
-depth <- (0.305+1)/2 #average between min & max
+depth <- (0.5+1.2)/2 #average between min & max
 depth_suitability_curve <- function(depth) {
   # Define the optimal range for depth
-  optimal_depth_range <- c(1, 3) # meters
+  optimal_depth_range <- c(0.5, 1.2) # meters
 
   # Define the lower and upper thresholds for depth
-  lower_threshold <- 0 # meters
-  upper_threshold <- 10 # meters
+  lower_threshold <- 0.2 # meters
+  upper_threshold <- 5 # meters
 
   # Compute the habitat suitability score based on depth
   if (depth < lower_threshold | depth > upper_threshold) {
@@ -41,10 +45,11 @@ plot_depth_suitability_curve <- function() {
 }
 plot_depth_suitability_curve()
 ```
+## Salinity
 
 ```{r}
 #optimal Salinity range from 0.0psu-0.5psu
-Salinity <- (0.5+5)/2 #average between min & max
+Salinity <- (0.5+15)/2 #average between min & max
 salinity_suitability_curve <- function(Salinity,optimal_salinity_range) {
   # Define the optimal range for Salinity
   optimal_salinity_range <- c(0.5, 15) #psu
@@ -79,17 +84,19 @@ plot_salinity_suitability_curve <- function() {
 }
 plot_salinity_suitability_curve()
 ```
+## Temperature
 
+Temperture for spawning around 2-31 degrees celcius with optimal levels of 10-25 degrees celcius (Stier & Crance, 1985). 
 ```{r}
 #optimal temperature range from 0.0psu-0.5psu
 temperature <- (6+15)/2 #average between min & max
 temperature_suitability_curve <- function(temperature,optimal_temp_range) {
   # Define the optimal range for temperature
-  optimal_temp_range <- c(12,24) #celcius
+  optimal_temp_range <- c(10,25) #celcius
 
   # Define the lower and upper thresholds for temperature
-  lower_threshold <- 10 # psu
-  upper_threshold <- 24 # psu
+  lower_threshold <- 2 # psu
+  upper_threshold <- 31 # psu
 
   # Compute the habitat suitability score based on temperature
   if (temperature < lower_threshold | temperature > upper_threshold) {
@@ -117,17 +124,19 @@ plot_temperature_suitability_curve <- function() {
 }
 plot_temperature_suitability_curve()
 ```
+## Flow Velocity
 
+(Stier & Crance, 1985)
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
 flow_velocity <- (0.3-0.5)/2 #average between min & max
 flow_velocity_suitability <- function(flow_velocity) {
   # Define the optimal range for depth
-  optimal_velocity_range <- c(0.3, 1.5) # meters/second
+  optimal_velocity_range <- c(0, 0.7) # meters/second
 
   # Define the lower and upper thresholds for depth
   lower_threshold <- 0 # meters/second
-  upper_threshold <- 3 # meters/second
+  upper_threshold <- 1 # meters/second
 
   # Compute the habitat suitability score based on depth
   if (flow_velocity < lower_threshold | flow_velocity > upper_threshold) {
@@ -155,6 +164,7 @@ plot_Velocity_suitability_curve <- function() {
 }
 plot_Velocity_suitability_curve()
 ```
+## Silt and Clay Percentage
 
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
@@ -193,3 +203,5 @@ plot_SiltClay_suitability_curve <- function() {
 }
 plot_SiltClay_suitability_curve()
 ```
+## Turbidity 
+turbidity  of  0.75-2.25 nephelometric turbidityunits  (NTU) (Ross et al., 1997)
