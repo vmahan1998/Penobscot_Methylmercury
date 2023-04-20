@@ -75,13 +75,13 @@ par(mfrow=c(2,3), cex=1.0)
 
 #### Depth
 
-According to Brown et al (2000), spawning adult Altantic Tomcod have a depth preference for MLT-10 meters. There is also a very low preference for habitat greater than 20 meters in depth. 
+According to Brown et al (2000), spawning adult Altantic Tomcod have a depth preference for MLT-10 meters. There is also a very low preference for habitat greater than 10 meters in depth. 
 
 #### Salinity
-Brown et al (2000) also describes a higher tolerance for salinity with high preference for habitat with salinity concentrations of <10 psu. Salinty concentrations greater than 15 are unsuitable for spawning adults.
+Brown et al (2000) also describes a higher tolerance for salinity with high preference for habitat with salinity concentrations of <15 psu. Salinty concentrations greater than 25 are unsuitable for spawning.
 
 #### Temperature
-Brown et al (2000) decribes a wide range of temperature preferences with optimal temperatures at 10-16 degrees celcius. The total range of temperatures suitable for spawning alewives is 2-26 degrees Celsius.  8&18 have 0.5
+Brown et al (2000) decribes a wide range of temperature preferences with optimal temperatures at 4-12 degrees celcius. The total range of temperatures suitable for spawning alewives is 0-14 degrees Celsius. 
 
 #### Flow Velocity
 
@@ -155,13 +155,13 @@ par(mfrow=c(2,3), cex=1.0)
 ```
 
 #### Depth
-Depth preference for juvenile atlantic tomcod was slightly different than spawning adults with a preference of MLT-10 meters with no habitat suitability past 10 meters (Brown et al (2000)).
+Depth preference for juvenile atlantic tomcod was slightly different than spawning adults with a preference of MLT-10 meters with no habitat suitability past 50 meters (Brown et al (2000)).
 
 #### Salinity
-Salinity preferences are greater for juvenile atlantic tommcod than spawning adults. Juvenile tomcod were listed to have a high preference for habitat with salinity concentrations <15 psu but show some suitability for estuary environments up to <30 psu (Brown et al (2000)).
+Salinity preferences are greater for juvenile atlantic tommcod than spawning adults. Juvenile tomcod were listed to have a high preference for habitat with salinity concentrations between 15-25 psu but show some suitability for estuary environments between 5-30 psu (Brown et al (2000)). Moderate preference for salinities between 10-28 psu 
 
 #### Temperature
-Temperature preferences for juvenile atlantic tomcod is a wider range than spawning adults. Juvenile atlantic tomcod have a preference for temperatures from 0-16 degrees celcius with optimal suitability from 4-12 degrees Celsius (Brown et al (2000)).
+Temperature preferences for juvenile atlantic tomcod is a wider range than spawning adults. Juvenile atlantic tomcod have a preference for temperatures from 2-26 degrees celcius with moderate preference for temperatures between 8-20 optimal suitability from 10-16 degrees Celsius (Brown et al (2000)).
 
 #### Flow Velocity
 

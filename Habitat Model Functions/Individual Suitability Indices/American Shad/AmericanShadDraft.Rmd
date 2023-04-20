@@ -75,8 +75,10 @@ par(mfrow=c(2,3), cex=1.0)
 #### Depth
 
 #### Salinity
+American shad develop salinity tolerance at the onset of metamorphosis which indicates moderate-high concentrations of salinity may be unsuitable (Zydlewski & McCormick, 1997). 
 
 #### Temperature
+Crecco & Savoy, 1985 showed that American Shad Larvae growth increased steadily as temperatures rose from 15-20 and then increased more slowly around a temperature of 23 degrees celcius.
 
 #### Flow Velocity
 
@@ -153,7 +155,7 @@ par(mfrow=c(2,3), cex=1.0)
 
 
 #### Salinity
-
+Shad Larvae can survive in salinities up to 22.5 psu with high mortality around 20-24 psu (Zydlewski & McCormick, 1997).
 
 #### Temperature
 
