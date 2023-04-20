@@ -8,7 +8,7 @@ output: pdf_document
 
 ## Spawning Adult Habitat Suitability
 
-```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Spawning American Shad Habitat"}
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for American Shad Spawning Habitat"}
 #Create data frame with freshwater tidal submodel
 americanshad.spawning <- data.frame(matrix(NA,nrow=7,ncol=12))
 colnames(americanshad.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")

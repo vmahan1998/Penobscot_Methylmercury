@@ -9,7 +9,7 @@ output: pdf_document
 
 ## Spawning Adult Habitat Suitability
 
-```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Spawning Adult Atlantic Tomcod Habitat"}
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Atlantic Tomcod Spawning Habitat"}
 #Create data frame with freshwater tidal submodel
 atlantictomcod.spawning <- data.frame(matrix(NA,nrow=7,ncol=12))
 colnames(atlantictomcod.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
