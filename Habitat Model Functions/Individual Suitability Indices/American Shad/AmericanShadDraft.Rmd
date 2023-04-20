@@ -1,0 +1,166 @@
+---
+title: "American Shad Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# American Shad
+
+## Spawning Adult Habitat Suitability
+
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Spawning American Shad Habitat"}
+#Create data frame with freshwater tidal submodel
+americanshad.spawning <- data.frame(matrix(NA,nrow=7,ncol=12))
+colnames(americanshad.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+americanshad.spawning$depth <- c(0,1,10,20,50,NA,NA)
+americanshad.spawning$depth.SIV <- c(0,1,1,0.1,0.1,NA,NA)
+americanshad.spawning$salinity <- c(0.5,5,10,15,20,35,NA)
+americanshad.spawning$salinity.SIV <- c(1,1,1,0.5,0,0,NA)
+americanshad.spawning$temp.C <- c(0,4,7,11,28,30,45)
+americanshad.spawning$temp.C.SIV <- c(0.1,0.5,0.5,1,1,0,0)
+americanshad.spawning$velocity <- c(0,0.05,0.3,1,5,NA,NA)
+americanshad.spawning$velocity.SIV <- c(0,1,1,0,0,NA,NA)
+americanshad.spawning$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA,NA)
+americanshad.spawning$silt.clay.SIV <- c(1,1,0.5,0,0,NA,NA)
+americanshad.spawning$tubidity <- c(0,0.2,0.4,0.8,1,NA,NA)
+americanshad.spawning$turbidity.SIV <- c(1,1,0.5,0,0,NA,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(americanshad.spawning$depth, americanshad.spawning$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.spawning$depth, americanshad.spawning$depth.SIV, pch=19, cex=2)
+  lines(americanshad.spawning$depth, americanshad.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(americanshad.spawning$salinity, americanshad.spawning$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.spawning$salinity, americanshad.spawning$salinity.SIV, pch=19, cex=2)
+  lines(americanshad.spawning$salinity, americanshad.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(americanshad.spawning$temp.C, americanshad.spawning$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.spawning$temp.C, americanshad.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(americanshad.spawning$temp.C, americanshad.spawning$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(americanshad.spawning$velocity, americanshad.spawning$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.spawning$velocity, americanshad.spawning$velocity.SIV, pch=19, cex=2)
+  lines(americanshad.spawning$velocity, americanshad.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(americanshad.spawning$silt.clay.per, americanshad.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.spawning$silt.clay.per, americanshad.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(americanshad.spawning$silt.clay.per, americanshad.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(americanshad.spawning$silt.clay.per, americanshad.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.spawning$silt.clay.per, americanshad.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(americanshad.spawning$silt.clay.per, americanshad.spawning$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+
+#### Salinity
+
+#### Temperature
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## Juvenile Habitat
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Juvenile American Shad Habitat"}
+#Create data frame with freshwater tidal submodel
+americanshad.juv <- data.frame(matrix(NA,nrow=6,ncol=12))
+colnames(americanshad.juv) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+americanshad.juv$depth <- c(0,1,10,20,50,NA)
+americanshad.juv$depth.SIV <- c(0,1,1,0,0,NA)
+americanshad.juv$salinity <- c(0.5,5,15,25,30,NA)
+americanshad.juv$salinity.SIV <- c(0.5,1,1,0.5,0.1,NA)
+americanshad.juv$temp.C <- c(0,2,4,12,14,16)
+americanshad.juv$temp.C.SIV <- c(0,0.5,1,1,0.5,0)
+americanshad.juv$velocity <- c(0,0.05,0.3,1,5,NA)
+americanshad.juv$velocity.SIV <- c(0,1,1,0,0,NA)
+americanshad.juv$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA)
+americanshad.juv$silt.clay.SIV <- c(1,1,0.5,0,0,NA)
+americanshad.juv$tubidity <- c(0,0.2,0.4,0.8,1,NA)
+americanshad.juv$turbidity.SIV <- c(1,1,0.5,0,0,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(americanshad.juv$depth, americanshad.juv$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.juv$depth, americanshad.juv$depth.SIV, pch=19, cex=2)
+  lines(americanshad.juv$depth, americanshad.juv$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(americanshad.juv$salinity, americanshad.juv$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.juv$salinity, americanshad.juv$salinity.SIV, pch=19, cex=2)
+  lines(americanshad.juv$salinity, americanshad.juv$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(americanshad.juv$temp.C, americanshad.juv$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.juv$temp.C, americanshad.juv$temp.C.SIV, pch=19, cex=2)
+  lines(americanshad.juv$temp.C, americanshad.juv$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(americanshad.juv$velocity, americanshad.juv$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.juv$velocity, americanshad.juv$velocity.SIV, pch=19, cex=2)
+  lines(americanshad.juv$velocity, americanshad.juv$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(americanshad.juv$silt.clay.per, americanshad.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.juv$silt.clay.per, americanshad.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(americanshad.juv$silt.clay.per, americanshad.juv$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(americanshad.juv$silt.clay.per, americanshad.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(americanshad.juv$silt.clay.per, americanshad.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(americanshad.juv$silt.clay.per, americanshad.juv$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+
+
+#### Salinity
+
+
+#### Temperature
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## References

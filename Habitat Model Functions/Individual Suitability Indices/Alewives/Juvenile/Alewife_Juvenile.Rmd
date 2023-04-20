@@ -11,11 +11,11 @@ output: html_document
 depth <- (0.305+1)/2 #average between min & max
 depth_suitability_curve <- function(depth) {
   # Define the optimal range for depth
-  optimal_depth_range <- c(0.5, 2) # meters
+  optimal_depth_range <- c(1, 10) # meters
 
   # Define the lower and upper thresholds for depth
   lower_threshold <- 0 # meters
-  upper_threshold <- 10 # meters
+  upper_threshold <- 20 # meters
 
   # Compute the habitat suitability score based on depth
   if (depth < lower_threshold | depth > upper_threshold) {
@@ -50,11 +50,11 @@ plot_depth_suitability_curve()
 Salinity <- (0+0.5)/2 #average between min & max
 salinity_suitability_curve <- function(Salinity,optimal_salinity_range) {
   # Define the optimal range for Salinity
-  optimal_salinity_range <- c(5, 10) #psu
+  optimal_salinity_range <- c(10, 25) #psu
 
   # Define the lower and upper thresholds for Salinity
   lower_threshold <- 0 # psu
-  upper_threshold <- 25 # psu
+  upper_threshold <- 30 # psu
 
   # Compute the habitat suitability score based on Salinity
   if (Salinity < lower_threshold | Salinity > upper_threshold) {
@@ -89,11 +89,11 @@ plot_salinity_suitability_curve()
 temperature <- (6+15)/2 #average between min & max
 temperature_suitability_curve <- function(temperature,optimal_temp_range) {
   # Define the optimal range for temperature
-  optimal_temp_range <- c(15,20) #celcius
+  optimal_temp_range <- c(12,22) #celcius
 
   # Define the lower and upper thresholds for temperature
-  lower_threshold <- 10 # psu
-  upper_threshold <- 20 # psu
+  lower_threshold <- 6 # psu
+  upper_threshold <- 30 # psu
 
   # Compute the habitat suitability score based on temperature
   if (temperature < lower_threshold | temperature > upper_threshold) {

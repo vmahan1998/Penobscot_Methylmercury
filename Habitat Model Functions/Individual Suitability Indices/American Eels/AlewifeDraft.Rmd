@@ -1,0 +1,75 @@
+---
+title: "Alewife Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# Alewife
+
+## Spawning Adult Habitat Suitability
+
+```{r echo=FALSE, fig.width=8, fig.height=8, fig.cap="Suitability index curves for Spawning Adult Alewife Habitat, tidal zone."}
+#Create data frame with freshwater tidal submodel
+alewife.spawning <- data.frame(matrix(NA,nrow=4,ncol=12))
+colnames(alewife.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+alewife.spawning$depth <- c(0,1,10,20)
+alewife.spawning$depth.SIV <- c(0,1,1,0)
+alewife.spawning$salinity <- c(0,5,10,25)
+alewife.spawning$salinity.SIV <- c(1,1,0.5,0)
+alewife.spawning$temp.C <- c(8,12,16,20)
+alewife.spawning$temp.C.SIV <- c(0,1,1,0)
+alewife.spawning$velocity <- c(0,0.05,0.3,1)
+alewife.spawning$velocity.SIV <- c(0,1,1,0)
+alewife.spawning$silt.clay.per <- c(0,0.2,0.4,1)
+alewife.spawning$silt.clay.SIV <- c(1,1,0.5,0)
+alewife.spawning$tubidity <- c(0,200,600,1000)
+alewife.spawning$turbidity.SIV <- c(1,1,0.5,0)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depthe
+  plot(alewife.spawning$depth, alewife.spawning$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$depth, alewife.spawning$depth.SIV, pch=19, cex=2)
+  lines(alewife.spawning$depth, alewife.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(alewife.spawning$salinity, alewife.spawning$salinity.SIV, xlim=c(0,100), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$salinity, alewife.spawning$salinity.SIV, pch=19, cex=2)
+  lines(alewife.spawning$salinity, alewife.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(alewife.spawning$temp.C, alewife.spawning$temp.C.SIV, xlim=c(0,100), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$temp.C, alewife.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(alewife.spawning$temp.C, alewife.spawning$temp.C.SIV, lwd=3)
+  
+  #velocitu
+  plot(alewife.spawning$velocity, alewife.spawning$velocity.SIV, xlim=c(0,5), ylim=c(0,1), type="l",
+       xlab="Relative Depth", ylab="Suitability Index (deposition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$velocity, alewife.spawning$velocity.SIV, pch=19, cex=2)
+  lines(alewife.spawning$velocity, alewife.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, xlim=c(0,5), ylim=c(0,1), type="l",
+       xlab="Relative Depth", ylab="Suitability Index (deposition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(alewife.spawning$turbidity, alewife.spawning$turbidity.SIV, xlim=c(0,5), ylim=c(0,1), type="l",
+       xlab="turbidity (nanometers)", ylab="Suitability Index (turbidity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$turbidity, alewife.spawning$turbidity.SIV, pch=19, cex=2)
+  lines(alewife.spawning$turbidity, alewife.spawning$turbidity.SIV, lwd=3)
+```
+
+## Juvenile Habitat Suitability

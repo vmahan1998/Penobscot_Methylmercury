@@ -68,10 +68,9 @@ The next step is to define suitability indicies for each species of interest for
 - Rainbow Smelt
 - Striped Bass
 
-Any areas where field work or sampling needs to be done?
+## Literature Review for Hydrodynamic Model
 
-
-## Suitability Curves by Species
+## Literature Review by Species
 
 ### Alewives
 
@@ -89,7 +88,7 @@ Any areas where field work or sampling needs to be done?
 
 ### Rainbow Smelt
 
-### Stiped Bass
+### Striped Bass
 
 ## Additonal Data Sources
 
@@ -97,3 +96,4 @@ Any areas where field work or sampling needs to be done?
 
 ### Vegetation Data Source
 
+## References

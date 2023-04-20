@@ -1,0 +1,170 @@
+---
+title: "Blueback Herring Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# Blueback Herring
+
+## Spawning Adult Habitat Suitability
+
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Spawning Adult Blueback Herring Habitat"}
+#Create data frame with freshwater tidal submodel
+bluebackherring.spawning <- data.frame(matrix(NA,nrow=7,ncol=12))
+colnames(bluebackherring.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+bluebackherring.spawning$depth <- c(0,1,10,20,50,NA,NA)
+bluebackherring.spawning$depth.SIV <- c(0,1,1,0.1,0.1,NA,NA)
+bluebackherring.spawning$salinity <- c(0.5,5,10,15,20,35,NA)
+bluebackherring.spawning$salinity.SIV <- c(1,1,1,0.5,0,0,NA)
+bluebackherring.spawning$temp.C <- c(0,4,7,11,28,30,45)
+bluebackherring.spawning$temp.C.SIV <- c(0.1,0.5,0.5,1,1,0,0)
+bluebackherring.spawning$velocity <- c(0,0.05,0.3,1,5,NA,NA)
+bluebackherring.spawning$velocity.SIV <- c(0,1,1,0,0,NA,NA)
+bluebackherring.spawning$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA,NA)
+bluebackherring.spawning$silt.clay.SIV <- c(1,1,0.5,0,0,NA,NA)
+bluebackherring.spawning$tubidity <- c(0,0.2,0.4,0.8,1,NA,NA)
+bluebackherring.spawning$turbidity.SIV <- c(1,1,0.5,0,0,NA,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(bluebackherring.spawning$depth, bluebackherring.spawning$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.spawning$depth, bluebackherring.spawning$depth.SIV, pch=19, cex=2)
+  lines(bluebackherring.spawning$depth, bluebackherring.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(bluebackherring.spawning$salinity, bluebackherring.spawning$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.spawning$salinity, bluebackherring.spawning$salinity.SIV, pch=19, cex=2)
+  lines(bluebackherring.spawning$salinity, bluebackherring.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(bluebackherring.spawning$temp.C, bluebackherring.spawning$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.spawning$temp.C, bluebackherring.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(bluebackherring.spawning$temp.C, bluebackherring.spawning$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(bluebackherring.spawning$velocity, bluebackherring.spawning$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.spawning$velocity, bluebackherring.spawning$velocity.SIV, pch=19, cex=2)
+  lines(bluebackherring.spawning$velocity, bluebackherring.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(bluebackherring.spawning$silt.clay.per, bluebackherring.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.spawning$silt.clay.per, bluebackherring.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(bluebackherring.spawning$silt.clay.per, bluebackherring.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(bluebackherring.spawning$silt.clay.per, bluebackherring.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.spawning$silt.clay.per, bluebackherring.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(bluebackherring.spawning$silt.clay.per, bluebackherring.spawning$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+
+#### Salinity
+
+#### Temperature
+
+Pardue decribes optimal spawning temperature for Blueback Herring between 20-24 degrees celcius. In contrast Tommasi et al 2015 describes optimal spawning temperatures around 11 degrees to maximize abundance of juvenile blueback herring. O'connell 1999 mentions that habitat patches with a temperature of 16.8 degrees celcius to have a probability of 0.5 for Blueback Herring egg presence. The paper also mentions high egg densities from 11-28 degrees celcius. Hatching success in impaired above 28 degrees (Pardue & O'Connell). 
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## Juvenile Habitat
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Juvenile Blueback Herring Habitat"}
+#Create data frame with freshwater tidal submodel
+bluebackherring.juv <- data.frame(matrix(NA,nrow=6,ncol=12))
+colnames(bluebackherring.juv) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+bluebackherring.juv$depth <- c(0,1,10,20,50,NA)
+bluebackherring.juv$depth.SIV <- c(0,1,1,0,0,NA)
+bluebackherring.juv$salinity <- c(0.5,5,15,25,30,NA)
+bluebackherring.juv$salinity.SIV <- c(0.5,1,1,0.5,0.1,NA)
+bluebackherring.juv$temp.C <- c(0,2,4,12,14,16)
+bluebackherring.juv$temp.C.SIV <- c(0,0.5,1,1,0.5,0)
+bluebackherring.juv$velocity <- c(0,0.05,0.3,1,5,NA)
+bluebackherring.juv$velocity.SIV <- c(0,1,1,0,0,NA)
+bluebackherring.juv$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA)
+bluebackherring.juv$silt.clay.SIV <- c(1,1,0.5,0,0,NA)
+bluebackherring.juv$tubidity <- c(0,0.2,0.4,0.8,1,NA)
+bluebackherring.juv$turbidity.SIV <- c(1,1,0.5,0,0,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(bluebackherring.juv$depth, bluebackherring.juv$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.juv$depth, bluebackherring.juv$depth.SIV, pch=19, cex=2)
+  lines(bluebackherring.juv$depth, bluebackherring.juv$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(bluebackherring.juv$salinity, bluebackherring.juv$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.juv$salinity, bluebackherring.juv$salinity.SIV, pch=19, cex=2)
+  lines(bluebackherring.juv$salinity, bluebackherring.juv$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(bluebackherring.juv$temp.C, bluebackherring.juv$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.juv$temp.C, bluebackherring.juv$temp.C.SIV, pch=19, cex=2)
+  lines(bluebackherring.juv$temp.C, bluebackherring.juv$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(bluebackherring.juv$velocity, bluebackherring.juv$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.juv$velocity, bluebackherring.juv$velocity.SIV, pch=19, cex=2)
+  lines(bluebackherring.juv$velocity, bluebackherring.juv$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(bluebackherring.juv$silt.clay.per, bluebackherring.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.juv$silt.clay.per, bluebackherring.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(bluebackherring.juv$silt.clay.per, bluebackherring.juv$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(bluebackherring.juv$silt.clay.per, bluebackherring.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(bluebackherring.juv$silt.clay.per, bluebackherring.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(bluebackherring.juv$silt.clay.per, bluebackherring.juv$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+
+
+#### Salinity
+
+
+#### Temperature
+
+Tommasi Et al 2015 describes optimal nursery habitat with an optimal temperature range between 20-24 degrees celcius with a total range of suitability from 16-26 degrees celcuis. Temperature also verified in where 100% survival is shown near 30 psu and decreased survival is experiences around 15 psu further at 0 psu (DiMaggio 2015).
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## References

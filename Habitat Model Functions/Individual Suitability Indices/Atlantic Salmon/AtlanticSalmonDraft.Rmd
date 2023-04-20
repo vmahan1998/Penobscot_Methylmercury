@@ -1,0 +1,171 @@
+---
+title: "Atlantic Salmon Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# Atlantic Salmon
+
+## Spawning Adult Habitat Suitability
+
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Spawning Adult Atlantic Salmon Habitat"}
+#Create data frame with freshwater tidal submodel
+atlanticsalmon.spawning <- data.frame(matrix(NA,nrow=7,ncol=12))
+colnames(atlanticsalmon.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+atlanticsalmon.spawning$depth <- c(0,1,10,20,50,NA,NA)
+atlanticsalmon.spawning$depth.SIV <- c(0,1,1,0,0,NA,NA)
+atlanticsalmon.spawning$salinity <- c(0,15,20,25,35,NA,NA)
+atlanticsalmon.spawning$salinity.SIV <- c(1,1,0.5,0.1,0,NA,NA)
+atlanticsalmon.spawning$temp.C <- c(0,4,6,8,12,14,22)
+atlanticsalmon.spawning$temp.C.SIV <- c(0,0.1,0.5,1,1,0.5,0.1)
+atlanticsalmon.spawning$velocity <- c(0,0.05,0.3,1,5,NA,NA)
+atlanticsalmon.spawning$velocity.SIV <- c(0,1,1,0,0,NA,NA)
+atlanticsalmon.spawning$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA,NA)
+atlanticsalmon.spawning$silt.clay.SIV <- c(1,1,0.5,0,0,NA,NA)
+atlanticsalmon.spawning$tubidity <- c(0,0.2,0.4,0.8,1,NA,NA)
+atlanticsalmon.spawning$turbidity.SIV <- c(1,1,0.5,0,0,NA,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(atlanticsalmon.spawning$depth, atlanticsalmon.spawning$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.spawning$depth, atlanticsalmon.spawning$depth.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.spawning$depth, atlanticsalmon.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(atlanticsalmon.spawning$salinity, atlanticsalmon.spawning$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.spawning$salinity, atlanticsalmon.spawning$salinity.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.spawning$salinity, atlanticsalmon.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(atlanticsalmon.spawning$temp.C, atlanticsalmon.spawning$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.spawning$temp.C, atlanticsalmon.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.spawning$temp.C, atlanticsalmon.spawning$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(atlanticsalmon.spawning$velocity, atlanticsalmon.spawning$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.spawning$velocity, atlanticsalmon.spawning$velocity.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.spawning$velocity, atlanticsalmon.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(atlanticsalmon.spawning$silt.clay.per, atlanticsalmon.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.spawning$silt.clay.per, atlanticsalmon.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.spawning$silt.clay.per, atlanticsalmon.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(atlanticsalmon.spawning$silt.clay.per, atlanticsalmon.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.spawning$silt.clay.per, atlanticsalmon.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.spawning$silt.clay.per, atlanticsalmon.spawning$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+
+According to Brown et al (2000), spawning adult Altantic Salmon have a depth preference for MLT-10 meters. There is also a lower preference for habitat greater than 20 meters in depth. 
+
+#### Salinity
+Brown et al (2000) also describes a higher tolerance for salinity with high preference for habitat with salinity concentrations of <15 psu. Salinty concentrations greater than 25 are unsuitable for spawning adults.
+
+#### Temperature
+Brown et al (2000) decribes a wide range of temperature preferences with optimal temperatures at 8-12 degrees celcius. The total range of temperatures suitable for spawning alewives is 4-22 degrees celcuis. 
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## Juvenile Habitat
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Juvenile Atlantic Salmon Habitat"}
+#Create data frame with freshwater tidal submodel
+atlanticsalmon.juv <- data.frame(matrix(NA,nrow=6,ncol=12))
+colnames(atlanticsalmon.juv) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+atlanticsalmon.juv$depth <- c(0,1,10,20,50,NA)
+atlanticsalmon.juv$depth.SIV <- c(0,1,1,0,0,NA)
+atlanticsalmon.juv$salinity <- c(0,5,10,25,35,NA)
+atlanticsalmon.juv$salinity.SIV <- c(0.1,0.5,1,1,0.5,NA)
+atlanticsalmon.juv$temp.C <- c(0,6,8,12,14,16)
+atlanticsalmon.juv$temp.C.SIV <- c(0,0.5,1,1,0.5,0)
+atlanticsalmon.juv$velocity <- c(0,0.05,0.3,1,5,NA)
+atlanticsalmon.juv$velocity.SIV <- c(0,1,1,0,0,NA)
+atlanticsalmon.juv$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA)
+atlanticsalmon.juv$silt.clay.SIV <- c(1,1,0.5,0,0,NA)
+atlanticsalmon.juv$tubidity <- c(0,0.2,0.4,0.8,1,NA)
+atlanticsalmon.juv$turbidity.SIV <- c(1,1,0.5,0,0,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(atlanticsalmon.juv$depth, atlanticsalmon.juv$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.juv$depth, atlanticsalmon.juv$depth.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.juv$depth, atlanticsalmon.juv$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(atlanticsalmon.juv$salinity, atlanticsalmon.juv$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.juv$salinity, atlanticsalmon.juv$salinity.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.juv$salinity, atlanticsalmon.juv$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(atlanticsalmon.juv$temp.C, atlanticsalmon.juv$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.juv$temp.C, atlanticsalmon.juv$temp.C.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.juv$temp.C, atlanticsalmon.juv$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(atlanticsalmon.juv$velocity, atlanticsalmon.juv$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.juv$velocity, atlanticsalmon.juv$velocity.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.juv$velocity, atlanticsalmon.juv$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(atlanticsalmon.juv$silt.clay.per, atlanticsalmon.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.juv$silt.clay.per, atlanticsalmon.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.juv$silt.clay.per, atlanticsalmon.juv$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(atlanticsalmon.juv$silt.clay.per, atlanticsalmon.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsalmon.juv$silt.clay.per, atlanticsalmon.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(atlanticsalmon.juv$silt.clay.per, atlanticsalmon.juv$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+Depth preference for juvenile atlantic salmon was very similar to spawning adults with a preference of MLT-10 meters with no habitat suitability past 20 meters (Brown et al (2000)).
+
+#### Salinity
+Salinity preferences are lower for juvenile atlantic salmon than spawning adults. Juvenile salmon were listed to have a high preference for habitat with salinity concentrations <5 psu but show some suitability for estuary environments up to <15 psu (Brown et al (2000)).
+
+#### Temperature
+Temperature preferences for juvenile atlantic salmon is a wider range than spawning adults. Juvenile atlantic salmon have a preference for temperatures from 6-16 degrees celcius with optimal suitability from 8-12 degrees Celsius (Brown et al (2000)).
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## References

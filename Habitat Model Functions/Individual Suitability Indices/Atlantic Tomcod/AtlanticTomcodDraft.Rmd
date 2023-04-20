@@ -1,0 +1,172 @@
+---
+title: "Atlantic Tomcod Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# Atlantic Tomcod
+
+
+## Spawning Adult Habitat Suitability
+
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Spawning Adult Atlantic Tomcod Habitat"}
+#Create data frame with freshwater tidal submodel
+atlantictomcod.spawning <- data.frame(matrix(NA,nrow=7,ncol=12))
+colnames(atlantictomcod.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+atlantictomcod.spawning$depth <- c(0,1,10,20,50,NA,NA)
+atlantictomcod.spawning$depth.SIV <- c(0,1,1,0.1,0.1,NA,NA)
+atlantictomcod.spawning$salinity <- c(0.5,5,10,15,20,35,NA)
+atlantictomcod.spawning$salinity.SIV <- c(1,1,1,0.5,0,0,NA)
+atlantictomcod.spawning$temp.C <- c(0,2,8,10,16,18,26)
+atlantictomcod.spawning$temp.C.SIV <- c(0,0.1,0.5,1,1,0.5,0.1)
+atlantictomcod.spawning$velocity <- c(0,0.05,0.3,1,5,NA,NA)
+atlantictomcod.spawning$velocity.SIV <- c(0,1,1,0,0,NA,NA)
+atlantictomcod.spawning$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA,NA)
+atlantictomcod.spawning$silt.clay.SIV <- c(1,1,0.5,0,0,NA,NA)
+atlantictomcod.spawning$tubidity <- c(0,0.2,0.4,0.8,1,NA,NA)
+atlantictomcod.spawning$turbidity.SIV <- c(1,1,0.5,0,0,NA,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(atlantictomcod.spawning$depth, atlantictomcod.spawning$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.spawning$depth, atlantictomcod.spawning$depth.SIV, pch=19, cex=2)
+  lines(atlantictomcod.spawning$depth, atlantictomcod.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(atlantictomcod.spawning$salinity, atlantictomcod.spawning$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.spawning$salinity, atlantictomcod.spawning$salinity.SIV, pch=19, cex=2)
+  lines(atlantictomcod.spawning$salinity, atlantictomcod.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(atlantictomcod.spawning$temp.C, atlantictomcod.spawning$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.spawning$temp.C, atlantictomcod.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(atlantictomcod.spawning$temp.C, atlantictomcod.spawning$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(atlantictomcod.spawning$velocity, atlantictomcod.spawning$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.spawning$velocity, atlantictomcod.spawning$velocity.SIV, pch=19, cex=2)
+  lines(atlantictomcod.spawning$velocity, atlantictomcod.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(atlantictomcod.spawning$silt.clay.per, atlantictomcod.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.spawning$silt.clay.per, atlantictomcod.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(atlantictomcod.spawning$silt.clay.per, atlantictomcod.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(atlantictomcod.spawning$silt.clay.per, atlantictomcod.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.spawning$silt.clay.per, atlantictomcod.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(atlantictomcod.spawning$silt.clay.per, atlantictomcod.spawning$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+
+According to Brown et al (2000), spawning adult Altantic Tomcod have a depth preference for MLT-10 meters. There is also a very low preference for habitat greater than 20 meters in depth. 
+
+#### Salinity
+Brown et al (2000) also describes a higher tolerance for salinity with high preference for habitat with salinity concentrations of <10 psu. Salinty concentrations greater than 15 are unsuitable for spawning adults.
+
+#### Temperature
+Brown et al (2000) decribes a wide range of temperature preferences with optimal temperatures at 10-16 degrees celcius. The total range of temperatures suitable for spawning alewives is 2-26 degrees Celsius.  8&18 have 0.5
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## Juvenile Habitat
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Juvenile Atlantic Salmon Habitat"}
+#Create data frame with freshwater tidal submodel
+atlantictomcod.juv <- data.frame(matrix(NA,nrow=6,ncol=12))
+colnames(atlantictomcod.juv) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+atlantictomcod.juv$depth <- c(0,1,10,20,50,NA)
+atlantictomcod.juv$depth.SIV <- c(0,1,1,0,0,NA)
+atlantictomcod.juv$salinity <- c(0.5,5,15,25,30,NA)
+atlantictomcod.juv$salinity.SIV <- c(0.5,1,1,0.5,0.1,NA)
+atlantictomcod.juv$temp.C <- c(0,2,4,12,14,16)
+atlantictomcod.juv$temp.C.SIV <- c(0,0.5,1,1,0.5,0)
+atlantictomcod.juv$velocity <- c(0,0.05,0.3,1,5,NA)
+atlantictomcod.juv$velocity.SIV <- c(0,1,1,0,0,NA)
+atlantictomcod.juv$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA)
+atlantictomcod.juv$silt.clay.SIV <- c(1,1,0.5,0,0,NA)
+atlantictomcod.juv$tubidity <- c(0,0.2,0.4,0.8,1,NA)
+atlantictomcod.juv$turbidity.SIV <- c(1,1,0.5,0,0,NA)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(atlantictomcod.juv$depth, atlantictomcod.juv$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.juv$depth, atlantictomcod.juv$depth.SIV, pch=19, cex=2)
+  lines(atlantictomcod.juv$depth, atlantictomcod.juv$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(atlantictomcod.juv$salinity, atlantictomcod.juv$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.juv$salinity, atlantictomcod.juv$salinity.SIV, pch=19, cex=2)
+  lines(atlantictomcod.juv$salinity, atlantictomcod.juv$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(atlantictomcod.juv$temp.C, atlantictomcod.juv$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.juv$temp.C, atlantictomcod.juv$temp.C.SIV, pch=19, cex=2)
+  lines(atlantictomcod.juv$temp.C, atlantictomcod.juv$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(atlantictomcod.juv$velocity, atlantictomcod.juv$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.juv$velocity, atlantictomcod.juv$velocity.SIV, pch=19, cex=2)
+  lines(atlantictomcod.juv$velocity, atlantictomcod.juv$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(atlantictomcod.juv$silt.clay.per, atlantictomcod.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.juv$silt.clay.per, atlantictomcod.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(atlantictomcod.juv$silt.clay.per, atlantictomcod.juv$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(atlantictomcod.juv$silt.clay.per, atlantictomcod.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlantictomcod.juv$silt.clay.per, atlantictomcod.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(atlantictomcod.juv$silt.clay.per, atlantictomcod.juv$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+Depth preference for juvenile atlantic tomcod was slightly different than spawning adults with a preference of MLT-10 meters with no habitat suitability past 10 meters (Brown et al (2000)).
+
+#### Salinity
+Salinity preferences are greater for juvenile atlantic tommcod than spawning adults. Juvenile tomcod were listed to have a high preference for habitat with salinity concentrations <15 psu but show some suitability for estuary environments up to <30 psu (Brown et al (2000)).
+
+#### Temperature
+Temperature preferences for juvenile atlantic tomcod is a wider range than spawning adults. Juvenile atlantic tomcod have a preference for temperatures from 0-16 degrees celcius with optimal suitability from 4-12 degrees Celsius (Brown et al (2000)).
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## References

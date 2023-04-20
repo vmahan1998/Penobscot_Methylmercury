@@ -4,6 +4,10 @@ author: "Vanessa Mahan"
 date: "2023-04-01"
 output: html_document
 ---
+```{r}
+library(ggplot2)
+library(ggpubr)
+```
 
 ```{r setup, include=FALSE}
 #depth_range <- c(0.305,0.61)#in meters
@@ -48,11 +52,11 @@ plot_depth_suitability_curve()
 Salinity <- (0+0.5)/2 #average between min & max
 salinity_suitability_curve <- function(Salinity) {
   # Define the optimal range for Salinity
-  optimal_salinity_range <- c(0, 0.5) #psu
+  optimal_salinity_range <- c(0.5,5) #psu
 
   # Define the lower and upper thresholds for Salinity
   lower_threshold <- 0 # psu
-  upper_threshold <- 5 # psu
+  upper_threshold <- 10 # psu
 
   # Compute the habitat suitability score based on Salinity
   if (Salinity < lower_threshold | Salinity > upper_threshold) {
@@ -76,7 +80,7 @@ plot_salinity_suitability_curve <- function() {
 
   # Plot the suitability scores as a curve
   plot(Salinities, suitability_scores, type = "l", xlab = "Salinity (psu)", ylab = "Habitat Suitability", ylim=c(0,1),
-       main = "Habitat Suitability Curve for Salinity Parameter")
+       main = "Habitat Suitability of Atlantic Salmon Juvenile Habitat")
 }
 plot_salinity_suitability_curve()
 ```

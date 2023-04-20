@@ -126,7 +126,6 @@ plot_temperature_suitability_curve()
 ```
 ## Flow Velocity
 
-(Stier & Crance, 1985)
 ```{r}
 #depth_range <- c(0.305,0.61)#in meters
 flow_velocity <- (0.3-0.5)/2 #average between min & max

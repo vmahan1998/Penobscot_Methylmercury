@@ -1,0 +1,172 @@
+---
+title: "Alewife Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# Alewife
+
+## Spawning Adult Habitat Suitability
+
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Spawning Adult Alewife Habitat"}
+#Create data frame with freshwater tidal submodel
+alewife.spawning <- data.frame(matrix(NA,nrow=5,ncol=12))
+colnames(alewife.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+alewife.spawning$depth <- c(0,1,10,30,50)
+alewife.spawning$depth.SIV <- c(0.5,1,1,0,0)
+alewife.spawning$salinity <- c(0,5,10,25,35)
+alewife.spawning$salinity.SIV <- c(1,1,0.5,0,0)
+alewife.spawning$temp.C <- c(8,12,22,30,45)
+alewife.spawning$temp.C.SIV <- c(0,1,1,0,0)
+alewife.spawning$velocity <- c(0,0.05,0.3,1,5)
+alewife.spawning$velocity.SIV <- c(0,1,1,0,0)
+alewife.spawning$silt.clay.per <- c(0,0.2,0.4,0.8,1)
+alewife.spawning$silt.clay.SIV <- c(1,1,0.5,0,0)
+alewife.spawning$tubidity <- c(0,0.2,0.4,0.8,1)
+alewife.spawning$turbidity.SIV <- c(1,1,1,0.5,0)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(alewife.spawning$depth, alewife.spawning$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$depth, alewife.spawning$depth.SIV, pch=19, cex=2)
+  lines(alewife.spawning$depth, alewife.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(alewife.spawning$salinity, alewife.spawning$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$salinity, alewife.spawning$salinity.SIV, pch=19, cex=2)
+  lines(alewife.spawning$salinity, alewife.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(alewife.spawning$temp.C, alewife.spawning$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$temp.C, alewife.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(alewife.spawning$temp.C, alewife.spawning$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(alewife.spawning$velocity, alewife.spawning$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$velocity, alewife.spawning$velocity.SIV, pch=19, cex=2)
+  lines(alewife.spawning$velocity, alewife.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(alewife.spawning$silt.clay.per, alewife.spawning$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+
+According to Brown et al (2000), spawning adult alewives have a depth preference for MLT-10 meters. There is also a lower preference for habitat greater than 30 meters in depth (Pardue). 
+
+#### Salinity
+Brown et al (2000) also describes a higher tolerance for salinity with high preference for habitat with salinity concentrations of <15 psu. Salinty concentrations greater than 20 are unsuitable for spawning adults.
+
+#### Temperature
+Brown et al (2000) describes a wide range of temperature preferences with optimal temperatures at 12-16 degrees celcius. The total range of temperatures suitable for spawning alewives is 8-20 degrees celcuis. Spawning success did not occur past 29.7 degrees (Pardue).
+
+#### Flow Velocity
+According to O'connell 1999, habitat patches with velocity values between .06 m/s and 0.16 m/s have a probability of 0.5 for the presence alewife eggs.
+
+#### Sediment Composition
+Spawning is extremely tlerant of suspended sediments (Pardue);(Auld and Schubel 1978).
+#### Turbity 
+
+## Juvenile Habitat
+```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Juvenile Alewife Habitat"}
+#Create data frame with freshwater tidal submodel
+alewife.juv <- data.frame(matrix(NA,nrow=5,ncol=12))
+colnames(alewife.juv) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV","tubidity","turbidity.SIV")
+
+alewife.juv$depth <- c(0,1,10,20,50)
+alewife.juv$depth.SIV <- c(0.5,1,1,0,0)
+alewife.juv$salinity <- c(0,5,10,25,35)
+alewife.juv$salinity.SIV <- c(0.1,0.5,1,1,0.5)
+alewife.juv$temp.C <- c(6,12,22,24,30)
+alewife.juv$temp.C.SIV <- c(0.1,1,1,0.5,0)
+alewife.juv$velocity <- c(0,0.05,0.3,1,5)
+alewife.juv$velocity.SIV <- c(0,1,1,0,0)
+alewife.juv$silt.clay.per <- c(0,0.2,0.4,0.8,1)
+alewife.juv$silt.clay.SIV <- c(1,1,0.5,0,0)
+alewife.juv$tubidity <- c(0,0.2,0.4,0.8,1)
+alewife.juv$turbidity.SIV <- c(1,1,0.5,0,0)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(alewife.juv$depth, alewife.juv$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.juv$depth, alewife.juv$depth.SIV, pch=19, cex=2)
+  lines(alewife.juv$depth, alewife.juv$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(alewife.juv$salinity, alewife.juv$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.juv$salinity, alewife.juv$salinity.SIV, pch=19, cex=2)
+  lines(alewife.juv$salinity, alewife.juv$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(alewife.juv$temp.C, alewife.juv$temp.C.SIV, xlim=c(0,50), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.juv$temp.C, alewife.juv$temp.C.SIV, pch=19, cex=2)
+  lines(alewife.juv$temp.C, alewife.juv$temp.C.SIV, lwd=3)
+  
+  #velocity
+  plot(alewife.juv$velocity, alewife.juv$velocity.SIV, xlim=c(0,8), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.juv$velocity, alewife.juv$velocity.SIV, pch=19, cex=2)
+  lines(alewife.juv$velocity, alewife.juv$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(alewife.juv$silt.clay.per, alewife.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.juv$silt.clay.per, alewife.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(alewife.juv$silt.clay.per, alewife.juv$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  plot(alewife.juv$silt.clay.per, alewife.juv$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Silt/Clay Percent", ylab="Suitability Index (sediment composition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(alewife.juv$silt.clay.per, alewife.juv$silt.clay.SIV, pch=19, cex=2)
+  lines(alewife.juv$silt.clay.per, alewife.juv$silt.clay.SIV, lwd=3)
+```
+
+#### Depth
+Depth preference for juvenile alewives was very similar to spawning adults with a preference of 0-10 meters with no habitat suitability past 20 meters (Brown et al (2000)).
+
+#### Salinity
+Salinity preferences are higher for juvenile alewives than spawning adults. Juvenile alewives were listed to have a high preference for habitat with salinity concentrations >10 psu but show some suitability for freshwater tidal environments (Brown et al (2000)). Can even be found in concentraions up to 30 psu (Pardue).
+
+#### Temperature
+Temperature preferences for juvenile alewives is a wider range than spawning adults. Juvenile alewives have a preference for temperatures from 6-30 degrees celcius with optimal suitability from 12-22 degrees Celsius (Brown et al (2000)). Pardue also verifies preference for lower temperatures around 6 degrees Celsius. Temperature also verified in where 100% survival is shown for 15 psu and decreased survival is experiences around 0 psu and 30 psu (DiMaggio 2015).
+
+#### Flow Velocity
+
+#### Sediment Composition
+
+#### Turbity 
+
+## References
