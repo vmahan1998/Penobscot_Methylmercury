@@ -73,18 +73,21 @@ par(mfrow=c(2,3), cex=1.0)
 ```
 
 #### Depth
+(Stier & Crance, 1985) describe depth as a minimal preference for american shad. They decribe optimal depth as 0.45m-12.2 meters with american shad found from 0-40 meters. Depth for spawning was evaluated using a present absent analysis of american shad eggs (Hightower et al., 2012). This study showed a preference for depths <3 meters with minimal suitability past 5 meters. Methods in (Galbraith et al., 2016) evaluated the suitability at depths between 0.3-3 meters and found that 47% of observed individuals were present at these depths.
 
 #### Salinity
-American shad develop salinity tolerance at the onset of metamorphosis which indicates moderate-high concentrations of salinity may be unsuitable (Zydlewski & McCormick, 1997). 
+American shad develop salinity tolerance at the onset of metamorphosis which indicates moderate-high concentrations of salinity may be unsuitable (Zydlewski & McCormick, 1997). American Shad larvae rear in fresh water (Hoffman et al., 2008). Stier & Crance, 1985 listed the total range of salinity suitability for spawning American Shad as <5 psu with some suitability until 15 psu.
 
 #### Temperature
-Crecco & Savoy, 1985 showed that American Shad Larvae growth increased steadily as temperatures rose from 15-20 and then increased more slowly around a temperature of 23 degrees celcius.
+Crecco & Savoy, 1985 showed that American Shad Larvae growth increased steadily as temperatures rose from 15-20 and then increased more slowly around a temperature of 23 degrees celcius. Stier & Crance, 1985 listed the total range of temperature suitability for spawning American Shad as 8-26 degrees Celsius with optimal suitability between 14-21 degrees. The extension of the suitability to 26 was suggested in (Ross et al., 1993).
 
 #### Flow Velocity
+Total range of spawning velocity was defined between 0.091 and 1.32 m.s with an optimal range between 0.305-0.914 m/s (Stier & Crance, 1985). In contrast, Ross et al, 1993 showed that suitability is optimal at any level below 0.9 m/s. Flow velocity preferences are described in (Hightower et al., 2012) as a strong preference for flows between 0.2 m/s-0.7 m/s with some preference for flows lower than 0.2 m/s. Methods in (Galbraith et al., 2016) evaluated the suitability at velocities between 0.2-0.7 meters/s and found that 78.95% of observed individuals were present at these velocities.
 
 #### Sediment Composition
 
 #### Turbity 
+Optimal tubidity was measured in ntus and decribed as <2 (Ross et al, 1993). 
 
 ## Juvenile Habitat
 ```{r echo=FALSE, fig.width=14, fig.height=10, fig.cap="Suitability index curves for Juvenile American Shad Habitat"}
@@ -94,10 +97,10 @@ colnames(americanshad.juv) <- c("depth","depth.SIV","salinity", "salinity.SIV", 
 
 americanshad.juv$depth <- c(0,1,10,20,50,NA)
 americanshad.juv$depth.SIV <- c(0,1,1,0,0,NA)
-americanshad.juv$salinity <- c(0.5,5,15,25,30,NA)
-americanshad.juv$salinity.SIV <- c(0.5,1,1,0.5,0.1,NA)
-americanshad.juv$temp.C <- c(0,2,4,12,14,16)
-americanshad.juv$temp.C.SIV <- c(0,0.5,1,1,0.5,0)
+americanshad.juv$salinity <- c(0.1,10,12,22,25,27.5)
+americanshad.juv$salinity.SIV <- c(0.1,0.5,1,1,0.5,0.1)
+americanshad.juv$temp.C <- c(0,1.2,4,9,17.9,30)
+americanshad.juv$temp.C.SIV <- c(0,0.1,1,1,0.1,0)
 americanshad.juv$velocity <- c(0,0.05,0.3,1,5,NA)
 americanshad.juv$velocity.SIV <- c(0,1,1,0,0,NA)
 americanshad.juv$silt.clay.per <- c(0,0.2,0.4,0.8,1,NA)
@@ -152,17 +155,19 @@ par(mfrow=c(2,3), cex=1.0)
 ```
 
 #### Depth
-
+(Stier & Crance, 1985) describe depth as a minimal preference for american shad. They describe optimal depth as 0.45m-12.2 meters with american shad found from 0-40 meters. Optimal depth for juvenile american shad was noted as less than 2 meters(Ross et al, 1993). No preference for depths greater than 5 meters. Methods in (Galbraith et al., 2016) evaluated the suitability at depths between 0.25-1.6 meters and found that 40% of observed individuals were present at these depths.
 
 #### Salinity
-Shad Larvae can survive in salinities up to 22.5 psu with high mortality around 20-24 psu (Zydlewski & McCormick, 1997).
+Shad Larvae can survive in salinities up to 22.5 psu with high mortality around 20-24 psu (Zydlewski & McCormick, 1997). American Shad juvenile rear in fresh water until winter where they move to estuarine waters(Hoffman et al., 2008). Hoffman et al, 2008 also evaluated the suitability of different salinity ranges for juvenile american shad for habitat preference. These were estimated as <10, 12-22, >=27.5
 
 #### Temperature
+Hoffman et al, 2008 also evaluated the suitability of different temperature ranges for juvenile american shad. These were estimated as <1.2, 4-9, >=17.9. 77% of observations occured from 4-9 degrees celcius (Hoffman). Ross et al, 1993 showed temperature preferences between 18-25 for the delaware river. There was very little preference for temperatures lower than 13 degrees. 
 
 #### Flow Velocity
+Methods in (Galbraith et al., 2016) evaluated the suitability at velocities between 0-0.6 meters/s and found that 83.33% of observed individuals were present at these velocities.
 
 #### Sediment Composition
 
 #### Turbity 
-
+Optimal turbidity was measure in nuts as <3 ntus being suitble with no preference for turbidity over 5 (Ross et al, 1993)
 ## References
