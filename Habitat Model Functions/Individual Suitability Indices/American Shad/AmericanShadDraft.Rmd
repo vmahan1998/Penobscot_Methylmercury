@@ -73,7 +73,7 @@ par(mfrow=c(2,3), cex=1.0)
 ```
 
 #### Depth
-(Stier & Crance, 1985) describe depth as a minimal preference for american shad. They decribe optimal depth as 0.45m-12.2 meters with american shad found from 0-40 meters. Depth for spawning was evaluated using a present absent analysis of american shad eggs (Hightower et al., 2012). This study showed a preference for depths <3 meters with minimal suitability past 5 meters. Methods in (Galbraith et al., 2016) evaluated the suitability at depths between 0.3-3 meters and found that 47% of observed individuals were present at these depths.
+(Stier & Crance, 1985) describe depth as a minimal preference for american shad. They describe optimal depth as 0.45m-12.2 meters with american shad found from 0-40 meters. Depth for spawning was evaluated using a present absent analysis of american shad eggs (Hightower et al., 2012). This study showed a preference for depths <3 meters with minimal suitability past 5 meters. Methods in (Galbraith et al., 2016) evaluated the suitability at depths between 0.3-3 meters and found that 47% of observed individuals were present at these depths.
 
 #### Salinity
 American shad develop salinity tolerance at the onset of metamorphosis which indicates moderate-high concentrations of salinity may be unsuitable (Zydlewski & McCormick, 1997). American Shad larvae rear in fresh water (Hoffman et al., 2008). Stier & Crance, 1985 listed the total range of salinity suitability for spawning American Shad as <5 psu with some suitability until 15 psu.

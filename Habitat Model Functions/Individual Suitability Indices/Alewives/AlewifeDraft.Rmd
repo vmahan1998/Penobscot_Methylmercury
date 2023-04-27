@@ -74,19 +74,19 @@ par(mfrow=c(2,3), cex=1.0)
 
 #### Depth
 
-According to Brown et al (2000), spawning adult alewives have a depth preference for MLT-10 meters. There is also a lower preference for habitat greater than 30 meters in depth (Pardue). In (Mather et al., 2012), 75% of alewives were observed in less than 2 meters.
+According to Brown et al (2000), spawning adult alewives have a depth preference for MLT-10 meters. There is also a lower preference for habitat greater than 30 meters in depth (Pardue). In (Mather et al., 2012), 75% of alewives were observed in less than 2 meters. According to (O’Connell & Angermeier, 1997), Alewives spawn in both shallow and deep water.
 
 #### Salinity
 Brown et al (2000) also describes a higher tolerance for salinity with high preference for habitat with salinity concentrations of <15 psu. Salinty concentrations greater than 20 are unsuitable for spawning adults.
 
 #### Temperature
-Brown et al (2000) describes a wide range of temperature preferences with optimal temperatures at 12-16 degrees celcius. The total range of temperatures suitable for spawning alewives is 8-20 degrees celcuis. Spawning success did not occur past 29.7 degrees (Pardue). Alewife migrate into freshwater streams when water temperatures reach between 8-18 degrees celcius (Mather et al., 2012). Spawning ceases at water temperatures exceeding 27◦C (Kissil 1974). Appropriate spawning temperatures broadly fall between 10◦C and 22◦C (Tyus 1974; Pardue 1983;Collette  and  Klein-MacPhee  2002).
+Brown et al (2000) describes a wide range of temperature preferences with optimal temperatures at 12-16 degrees celcius. The total range of temperatures suitable for spawning alewives is 8-20 degrees celcuis. Spawning success did not occur past 29.7 degrees (Pardue). Alewife migrate into freshwater streams when water temperatures reach between 8-18 degrees celcius (Mather et al., 2012). Spawning ceases at water temperatures exceeding 27◦C (Kissil 1974). Appropriate spawning temperatures broadly fall between 10◦C and 22◦C (Tyus 1974; Pardue 1983;Collette  and  Klein-MacPhee  2002). Temperatures from 11-28 are suitable for alewife eggs (Klauda et al. 1991).
 
 #### Flow Velocity
 According to O'connell 1999, habitat patches with velocity values between .06 m/s and 0.16 m/s have a probability of 0.5 for the presence alewife eggs. Pardue describes velocities less than 0.3 m/s as suitable habitat for spawning.
 
 #### Sediment Composition/ grain size distribution
-
+Spawn over a range of substrates like gravel, sand, and other soft substrates (O’Connell & Angermeier, 1997).
 
 #### Turbity 
 Spawning is extremely tolerant of suspended sediments (Pardue);(Auld and Schubel 1978).

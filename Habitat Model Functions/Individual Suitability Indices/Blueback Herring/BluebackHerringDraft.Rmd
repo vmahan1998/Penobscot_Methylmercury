@@ -73,16 +73,18 @@ par(mfrow=c(2,3), cex=1.0)
 ```
 
 #### Depth
+According to (O’Connell & Angermeier, 1997), Alewives spawn in both shallow and deep water.
 
 #### Salinity
 
 #### Temperature
 
-Pardue decribes optimal spawning temperature for Blueback Herring between 20-24 degrees celcius. In contrast Tommasi et al 2015 describes optimal spawning temperatures around 11 degrees to maximize abundance of juvenile blueback herring. O'connell 1999 mentions that habitat patches with a temperature of 16.8 degrees celcius to have a probability of 0.5 for Blueback Herring egg presence. The paper also mentions high egg densities from 11-28 degrees celcius. Hatching success in impaired above 28 degrees (Pardue & O'Connell). Blueback Herring eggs were found in 1996 between 11.4-23  and in 1997 10.98C to 20.88C degrees Celcius (Walsh et al., 2005).
+Pardue decribes optimal spawning temperature for Blueback Herring between 20-24 degrees celcius. In contrast Tommasi et al 2015 describes optimal spawning temperatures around 11 degrees to maximize abundance of juvenile blueback herring. O'connell 1999 mentions that habitat patches with a temperature of 16.8 degrees celcius to have a probability of 0.5 for Blueback Herring egg presence. The paper also mentions high egg densities from 11-28 degrees celcius. Hatching success in impaired above 28 degrees (Pardue & O'Connell). Blueback Herring eggs were found in 1996 between 11.4-23  and in 1997 10.98C to 20.88C degrees Celcius (Walsh et al., 2005).Temperatures from 14-26 are suitable for alewife eggs (Klauda et al. 1991).
 
 #### Flow Velocity
 
 #### Sediment Composition
+Prefer to spawn over hard substrate (O’Connell & Angermeier, 1997).
 
 #### Turbity 
 

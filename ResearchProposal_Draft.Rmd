@@ -1,0 +1,80 @@
+---
+title: "Research Proposal Draft"
+author: "Vanessa Mahan"
+date: "2023-04-27"
+output:
+  pdf_document: default
+  html_document: default
+---
+# Using a Coupled Model Approach to Predict Concentrations of Organic Mercury and Quantify the Impact on Fish Habitat for Penobscot River
+
+## Abstract
+## Introduction
+
+## Research Tasks
+To address the research gaps, three tasks will be completed as following: (1) evaluate transport characteristics of sediment throughout the Penobscot Estuary to link hydrodynamic conditions to the circulation of mercury-contaminated sediment and concentrations of methylmercury, (2) develop an updated suite of habitat indices linking hydrodynamic conditions to habitat quality for ten diadromous fish species native to the Penobscot River, and (3) estimate the geographic range and location of diadromous fish habitat throughout the Penobscot River and identify habitat areas with high levels of transport for mercury-contaminated sediment or high concentrations of methylmercury.
+
+### Task I. Evaluate transport characteristics of sediment throughout the Penobscot River to link hydrodynamic conditions to the movement of mercury-contaminated sediment and production of methylmercury
+
+_Hypothesis I._
+
+### Task II. Develop an updated suite of habitat indices linking hydrodynamic conditions to habitat quality for ten diadromous fish species and estimate the geographic range and location of spawning and juvenile fish habitat throughout the Penobscot River
+
+_Hypothesis II._
+
+### Task III. Numerically evaluate the transportion of mercury-contaminated sediment and concentrations of methylmercury for diadromous fish habitat in the Penobscot River.
+
+_Hypothesis III._
+
+## Preliminary Results
+## Dissertation Timeline
+```{r echo=FALSE, fig.width=12, fig.height=6, out.width= "100%",fig.cap="Dissertation Timeline"}
+knitr::opts_chunk$set(echo = FALSE)
+library(ggplot2)
+library(scales)
+
+# Create sample data for timeline
+timeline_data <- data.frame(
+  Event = c("Task I","Task II","Task III"),
+  Date = as.Date(c("2024-01-01", "2023-08-01", "2024-01-01",
+                   "2023-12-01","2023-06-01","2023-12-01",
+                   "2024-06-01","2023-10-01","2024-06-01",
+                   "2024-08-01","2023-12-01","2024-08-01",
+                   "2025-01-01","2024-01-01","2025-10-01",
+                   "2025-08-01","2024-06-01","2026-04-01",
+                   "2026-05-15","2026-05-15","2026-05-15")),
+  
+  Description = c("Literature Review","Literature Review","Literature Review",
+                  "Field Work","Field Work","Field Work",
+                  "Model Development","Model Development","Model Development",
+                  "Model Experiments","Model Experiments","Model Experiments",
+                  "Data Analysis","Data Analysis","Data Analysis",
+                  "Draft Manuscript","Draft Manuscript","Draft Manuscript",
+                  "Defense","Defense","Defense")
+)
+
+# Create timeline plot
+ggplot(timeline_data, aes(x = Date, y = Event, color = Event)) +
+  geom_vline(xintercept = as.numeric(timeline_data$Date), linetype = "dashed") +
+  geom_point() +
+  geom_text(aes(label = Description), hjust = -0.1, angle = 45, size = 3) +
+  scale_x_date(date_breaks = "months", date_labels = "%m/%d") +
+  labs(title = "Dissertation Timeline", x = "Month", y = "", color = "") +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+
+```
+
+## Planned Research Products
+
+### Publications
+- Habitat Suitability Models for ten diadromous fish in the Northeastern United States
+
+
+### Conference Publications
+
+### Misc. Publishable Products
+- Grain Size Distribution dataset for the Penobscot River
+- R-Package containing suitability models, processing functions, and mapping functions
+
+## References
