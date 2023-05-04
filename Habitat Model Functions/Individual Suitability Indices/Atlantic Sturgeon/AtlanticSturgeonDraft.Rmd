@@ -1,0 +1,90 @@
+---
+title: "Atlantic Sturgeon Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# Atlantic Sturgeon
+
+## Spawning Habitat Suitability
+
+### Depth
+Depth of known 
+14
+spawning sites outside of the James River range from 6 - 27 m, with most observations having occurred in water deeper than 10 m (Geoffrey, 2012). 
+
+### Temperature
+
+### Salinity
+Atlantic Sturgeon only spawn in freshwater tidal areas less than <5 psu and prefer areas <0.5 psu (Geoffrey, 2012). 
+
+### Flow Velocity
+
+### Grain Size
+Sturgeon spawning beds must be dominated by exposed hard substrate ≥ 30 mm in size (Sulak et al. 2000).
+
+```{r echo=FALSE, fig.width=8, fig.height=8, fig.cap="Suitability index curves for Spawning Atlantic Sturgeon Habitat."}
+#Create data frame with freshwater tidal submodel
+atlanticsturgeon.spawning <- data.frame(matrix(NA,nrow=4,ncol=12))
+colnames(atlanticsturgeon.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV")
+
+atlanticsturgeon.spawning$depth <- c(0,1,10,20)
+atlanticsturgeon.spawning$depth.SIV <- c(0,1,1,0)
+atlanticsturgeon.spawning$salinity <- c(0,5,10,25)
+atlanticsturgeon.spawning$salinity.SIV <- c(1,1,0.5,0)
+atlanticsturgeon.spawning$temp.C <- c(8,12,16,20)
+atlanticsturgeon.spawning$temp.C.SIV <- c(0,1,1,0)
+atlanticsturgeon.spawning$velocity <- c(0,0.05,0.3,1)
+atlanticsturgeon.spawning$velocity.SIV <- c(0,1,1,0)
+atlanticsturgeon.spawning$silt.clay.per <- c(0,0.2,0.4,1)
+atlanticsturgeon.spawning$silt.clay.SIV <- c(1,1,0.5,0)
+#atlanticsturgeon.spawning$tubidity <- c(0,200,600,1000)
+#atlanticsturgeon.spawning$turbidity.SIV <- c(1,1,0.5,0)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depthe
+  plot(atlanticsturgeon.spawning$depth, atlanticsturgeon.spawning$depth.SIV, xlim=c(0,100), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsturgeon.spawning$depth, atlanticsturgeon.spawning$depth.SIV, pch=19, cex=2)
+  lines(atlanticsturgeon.spawning$depth, atlanticsturgeon.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(atlanticsturgeon.spawning$salinity, atlanticsturgeon.spawning$salinity.SIV, xlim=c(0,100), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsturgeon.spawning$salinity, atlanticsturgeon.spawning$salinity.SIV, pch=19, cex=2)
+  lines(atlanticsturgeon.spawning$salinity, atlanticsturgeon.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(atlanticsturgeon.spawning$temp.C, atlanticsturgeon.spawning$temp.C.SIV, xlim=c(0,100), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsturgeon.spawning$temp.C, atlanticsturgeon.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(atlanticsturgeon.spawning$temp.C, atlanticsturgeon.spawning$temp.C.SIV, lwd=3)
+  
+  #velocitu
+  plot(atlanticsturgeon.spawning$velocity, atlanticsturgeon.spawning$velocity.SIV, xlim=c(0,5), ylim=c(0,1), type="l",
+       xlab="Relative Depth", ylab="Suitability Index (deposition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsturgeon.spawning$velocity, atlanticsturgeon.spawning$velocity.SIV, pch=19, cex=2)
+  lines(atlanticsturgeon.spawning$velocity, atlanticsturgeon.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(atlanticsturgeon.spawning$silt.clay.per, atlanticsturgeon.spawning$silt.clay.SIV, xlim=c(0,5), ylim=c(0,1), type="l",
+       xlab="Relative Depth", ylab="Suitability Index (deposition)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(atlanticsturgeon.spawning$silt.clay.per, atlanticsturgeon.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(atlanticsturgeon.spawning$silt.clay.per, atlanticsturgeon.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  #plot(atlanticsturgeon.spawning$turbidity, atlanticsturgeon.spawning$turbidity.SIV, xlim=c(0,5), ylim=c(0,1), type="l",
+       #xlab="turbidity (nanometers)", ylab="Suitability Index (turbidity)")
+  #abline(h=seq(0,1,0.1), lty=3)
+  #points(atlanticsturgeon.spawning$turbidity, atlanticsturgeon.spawning$turbidity.SIV, pch=19, cex=2)
+  #lines(atlanticsturgeon.spawning$turbidity, atlanticsturgeon.spawning$turbidity.SIV, lwd=3)
+```
+
+## Juvenile Habitat Suitability

@@ -14,15 +14,20 @@ output:
 ## Research Tasks
 To address the research gaps, three tasks will be completed as following: (1) evaluate transport characteristics of sediment throughout the Penobscot Estuary to link hydrodynamic conditions to the circulation of mercury-contaminated sediment and concentrations of methylmercury, (2) develop an updated suite of habitat indices linking hydrodynamic conditions to habitat quality for ten diadromous fish species native to the Penobscot River, and (3) estimate the geographic range and location of diadromous fish habitat throughout the Penobscot River and identify habitat areas with high levels of transport for mercury-contaminated sediment or high concentrations of methylmercury.
 
-### Task I. Evaluate transport characteristics of sediment throughout the Penobscot River to link hydrodynamic conditions to the movement of mercury-contaminated sediment and production of methylmercury
+### Task I. Evaluate how tidal non-linearities affect the transport of sediment in the water column.
+- 1 Manuscript
 
 _Hypothesis I._
 
-### Task II. Develop an updated suite of habitat indices linking hydrodynamic conditions to habitat quality for ten diadromous fish species and estimate the geographic range and location of spawning and juvenile fish habitat throughout the Penobscot River
-
+### Task II. Develop an updated suite of habitat models linking hydrodynamic conditions to habitat quality for ten diadromous fish species and estimate the geographic range and location of spawning and juvenile fish habitat throughout the Penobscot River.
+- 2 Manuscripts
+  - Model Document
+  - Case Study
+  
 _Hypothesis II._
 
-### Task III. Numerically evaluate the transportion of mercury-contaminated sediment and concentrations of methylmercury for diadromous fish habitat in the Penobscot River.
+### Task III. Evaluate sediment transport characteristics and concentrations of methylmercury for diadromous fish habitat in the Penobscot River.
+- 1 Manuscript
 
 _Hypothesis III._
 

@@ -1,0 +1,103 @@
+---
+title: "Shortnose Sturgeon Habitat Suitability Model"
+author: "Vanessa Mahan"
+date: "2023-04-19"
+output: pdf_document
+---
+# Shortnose Sturgeon
+
+## Spawning Habitat Suitability
+
+```{r echo=FALSE, fig.width=12, fig.height=8, fig.cap="Suitability index curves for Spawning Shortnose Sturgeon Habitat, tidal zone."}
+#Create data frame with freshwater tidal submodel
+shortsturgeon.spawning <- data.frame(matrix(NA,nrow=4,ncol=12))
+colnames(shortsturgeon.spawning) <- c("depth","depth.SIV","salinity", "salinity.SIV", "temp.C", "temp.C.SIV","velocity","velocity.SIV","silt.clay.per","silt.clay.SIV")#,"tubidity","turbidity.SIV")
+
+shortsturgeon.spawning$depth <- c(0,3,6,15)
+shortsturgeon.spawning$depth.SIV <- c(0.2,1,1,0)
+shortsturgeon.spawning$salinity <- c(0,5,10,25)
+shortsturgeon.spawning$salinity.SIV <- c(1,1,0,0)
+shortsturgeon.spawning$temp.C <- c(0,10,17,27)
+shortsturgeon.spawning$temp.C.SIV <- c(0.5,1,1,0)
+shortsturgeon.spawning$velocity <- c(0,0.3,0.7,1.5)
+shortsturgeon.spawning$velocity.SIV <- c(0,1,1,0)
+shortsturgeon.spawning$silt.clay.per <- c(0,0.2,0.4,1)
+shortsturgeon.spawning$silt.clay.SIV <- c(1,1,0,0)
+#shortsturgeon.spawning$tubidity <- c(0,200,600,1000)
+#shortsturgeon.spawning$turbidity.SIV <- c(1,1,0.5,0)
+
+##########
+#Create summary figure for fresh.tid submodel
+par(mfrow=c(2,3), cex=1.0)
+
+  #Depth
+  plot(shortsturgeon.spawning$depth, shortsturgeon.spawning$depth.SIV, xlim=c(0,30), ylim=c(0,1), type="l", xlab="Depth (meters)", ylab="Suitability Index (depth)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(shortsturgeon.spawning$depth, shortsturgeon.spawning$depth.SIV, pch=19, cex=2)
+  lines(shortsturgeon.spawning$depth, shortsturgeon.spawning$depth.SIV, lwd=3)
+  
+  #salinity.
+  plot(shortsturgeon.spawning$salinity, shortsturgeon.spawning$salinity.SIV, xlim=c(0,35), ylim=c(0,1), type="l",
+       xlab="Salinity (psu)", ylab="Suitability Index (salinity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(shortsturgeon.spawning$salinity, shortsturgeon.spawning$salinity.SIV, pch=19, cex=2)
+  lines(shortsturgeon.spawning$salinity, shortsturgeon.spawning$salinity.SIV, lwd=3)
+  
+  #temperature
+  plot(shortsturgeon.spawning$temp.C, shortsturgeon.spawning$temp.C.SIV, xlim=c(0,30), ylim=c(0,1), type="l",
+       xlab="Temperature (Celcius)", ylab="Suitability Index (temperature)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(shortsturgeon.spawning$temp.C, shortsturgeon.spawning$temp.C.SIV, pch=19, cex=2)
+  lines(shortsturgeon.spawning$temp.C, shortsturgeon.spawning$temp.C.SIV, lwd=3)
+  
+  #velocitu
+  plot(shortsturgeon.spawning$velocity, shortsturgeon.spawning$velocity.SIV, xlim=c(0,2), ylim=c(0,1), type="l",
+       xlab="Velocity (m/s)", ylab="Suitability Index (velocity)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(shortsturgeon.spawning$velocity, shortsturgeon.spawning$velocity.SIV, pch=19, cex=2)
+  lines(shortsturgeon.spawning$velocity, shortsturgeon.spawning$velocity.SIV, lwd=3)
+  
+  #silt/clay percentage
+  plot(shortsturgeon.spawning$silt.clay.per, shortsturgeon.spawning$silt.clay.SIV, xlim=c(0,1), ylim=c(0,1), type="l",
+       xlab="Sediment Composition", ylab="Suitability Index (sediment)")
+  abline(h=seq(0,1,0.1), lty=3)
+  points(shortsturgeon.spawning$silt.clay.per, shortsturgeon.spawning$silt.clay.SIV, pch=19, cex=2)
+  lines(shortsturgeon.spawning$silt.clay.per, shortsturgeon.spawning$silt.clay.SIV, lwd=3)
+  
+   #turbidity
+  #plot(shortsturgeon.spawning$turbidity, shortsturgeon.spawning$turbidity.SIV, xlim=c(0,5), ylim=c(0,1), type="l",
+       #xlab="turbidity (nanometers)", ylab="Suitability Index (turbidity)")
+  #abline(h=seq(0,1,0.1), lty=3)
+  #points(shortsturgeon.spawning$turbidity, shortsturgeon.spawning$turbidity.SIV, pch=19, cex=2)
+  #lines(shortsturgeon.spawning$turbidity, shortsturgeon.spawning$turbidity.SIV, lwd=3)
+```
+## Depth
+Spawning is associated with deeper areas between 3-12.0 m, 3-6 =1, 12= 0.5 m (Crance, 1986). Spawning typically occurs in the main channel of a river at water depths ranging from 1.2 to 10.4 m (Richmond & Kynard 1995; Kieffer & Kynard 1996). Wintering depths of spawning adults range from 1.5-15.0m (Lachapelle, 2013). (Kynard et al., 2000) lists the depth preference for spawning as 3-15 meters.
+
+## Temperature
+Spawning begins in spring when temperatures are 10-16 degrees celcius (Crance, 1986). Some adults arrive in fall and overwinter until they spawn in spring and start migration from 9-15 degrees celcius (Buckley and Kynard 1985a). Sturgeon were found overwintering in 6.7-25.3 degrees celcius (Lachapelle, 2013). Optimal suitability was described between 7.8-17.3 degrees celcius (Lachapelle, 2013). foraging ceases when temperatures are lower than 10 degrees celcius (Kynard et al., 2000).
+
+## Salinity
+Spawning for shortnose sturgeon spawn in freshwater during spring < 5 psu (Crance, 1986). Spawning habitat was surveyed in habitats with salinities between 0-6 psu (Hall et al., 1991). 
+
+## Flow Velocity
+Spawning is associated with water velocities of 0.36 m/s- 1.25 m/s (Taubert 1980a)(Buckley and Kynard 1985a). Mean velocity during spawning season was between 0.30 m/s-0.76 m/s, 1.52 m/s = 0.2 (Crance, 1986). Suitable water velocities for northern populations of the species range from 0.36 to 1.2 m s-1 108 ,based on research conducted in the Connecticut, Merrimack, and Androscoggin rivers (Buckley & Kynard 1985; Squiers et al. 1993; Kieffer & Kynard 1996). Adjusted flow velocity to 0.76 is supported by (Johnston et al)Velocities of the Penobscot River where overwintering sturgeon were found rand from 0.411 m/s to 0.570 m/s with maximum flow velocity in fall as 1.283 m/s (Lachapelle, 2013). Maximum flow velocity in spring was around 2.277 m/s and most sturgeon had moved out of the river when velocities reached above 0.579 m/s. Sturgeons were not detected when velocities increased above ~1.55 m/s (Lachapelle, 2013). 
+
+## Sediment Composition
+Spawning is associated were the predominate substrate type is a combination of gravel, rubble, and cobble (Crance, 1986). This would be grain sizes 2-250 nm (Crance, 1986). Substrate grain size classes considered most suitable for spawning include boulder, cobble, and gravel (grain sizes ≥ 8 mm) (Dadswell 1979; Taubert 1980; Buckley & Kynard 1985). Grain size >80% dominated by course substrate is prefered for overwintering of spawning adults. 
+
+## Juvenile Habitat Suitability
+## Depth
+Juvenile shortnose sturgeon are associated with deeper areas between 3.0-12.0 m (Crance, 1986). Juvenile shortnose sturgeon were found in depths of 2.1-13.4 m (Collins et al., 2002). Juveniles were surveyed in habitats with depths between 6-9 meters (Hall et al., 1991). (Kynard et al., 2000) lists the depth preference for juveniles as 3-15 meters.
+
+## Temperature
+Juvenile shortnose sturgeon prefer temperatures between 10-24 degrees celcius (Crance, 1986). (Woodland et al., 2009) shows the optimal suitability for juvenile shortnose sturgeon as between 18-22 degrees celcius. According to (Collins et al., 2002), juvenile shortnose sturgeon move downriver to deeper areas when temperatures reach over 22 degrees Celsius and upstream when temperatures are below 22 degrees. 
+
+## Salinity
+Juvenile shortnose sturgeon were found in salinities of 5 to 17.6 psu (Collins et al., 2002). Juveniles were surveyed in habitats with salinities between 3-6 psu (Hall et al., 1991). 
+
+## Flow Velocity
+Mean velocity for juveniles in the summer was between 0.15 m/s-0.76 m/s (Crance, 1986).  Juveniles were surveyed in habitats with velocities between 0.52-1.02 m/s (Hall et al., 1991). (Kynard et al., 2000) lists the velocity preference for juveniles as less than 0.4 m/s in fall and winter.
+
+## Sediment Composition
+Juvenile shortnose sturgeon is associated were the predominate grain size is betweeen 0-64 nm where graine sizes between 64-250 nm = 0.5 and grain sizes over 4000 = 0 (Crance, 1986). Juveniles were surveyed in habitats with dominant sediment types of sandy/silt/clay (Hall et al., 1991). 
