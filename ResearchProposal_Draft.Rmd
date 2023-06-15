@@ -40,31 +40,30 @@ library(scales)
 
 # Create sample data for timeline
 timeline_data <- data.frame(
-  Event = c("Task I","Task II","Task III"),
-  Date = as.Date(c("2024-01-01", "2023-08-01", "2024-01-01",
-                   "2023-12-01","2023-06-01","2023-12-01",
-                   "2024-06-01","2023-10-01","2024-06-01",
-                   "2024-08-01","2023-12-01","2024-08-01",
-                   "2025-01-01","2024-01-01","2025-10-01",
-                   "2025-08-01","2024-06-01","2026-04-01",
-                   "2026-05-15","2026-05-15","2026-05-15")),
+  Event = c("Task I. Tidal Non-Linearities", "Task II. Habitat Models","Task III. Contaminated Sediment", "Project Milestones"),
+  Date = as.Date(c("2024-01-01", "2023-08-01", "2024-08-01","2023-07-01",#literature review
+                   "2023-12-01",NA,"2024-12-31","2024-02-15",#Field work
+                   NA,"2023-10-31","2025-05-01",NA, #Model Development
+                   "2024-08-01","2024-02-01","2025-10-01","2024-07-01", #Data Analysis
+                   "2025-01-01","2024-06-01","2026-02-01",NA, #Draft Manuscript
+                   "2025-06-01","2024-10-01","2026-06-01","2026-05-15")),#Manuscript submission
   
-  Description = c("Literature Review","Literature Review","Literature Review",
-                  "Field Work","Field Work","Field Work",
-                  "Model Development","Model Development","Model Development",
-                  "Model Experiments","Model Experiments","Model Experiments",
-                  "Data Analysis","Data Analysis","Data Analysis",
-                  "Draft Manuscript","Draft Manuscript","Draft Manuscript",
-                  "Defense","Defense","Defense")
+  Description = c("Literature Review","Literature Review","Literature Review","Plan of Study",
+                  "Field Work",NA,"Field Work","Research Proposal",
+                  NA,"Model Development","Model Simulations",NA,
+                  "Data Analysis","Data Analysis","Data Analysis","Canidacy Exam",
+                  "Draft Manuscript","Draft Manuscript","Draft Manuscript",NA,
+                  "Manuscript Submission","Manuscript Submission","Manuscript Submission","Defense")
 )
 
 # Create timeline plot
 ggplot(timeline_data, aes(x = Date, y = Event, color = Event)) +
-  geom_vline(xintercept = as.numeric(timeline_data$Date), linetype = "dashed") +
+  geom_vline(xintercept = as.numeric(timeline_data$Date), linetype = "dashed", cex = 0.5) +
   geom_point() +
+  scale_color_manual(labels = c("Project Milestones","Task I","Task II","Task III"), values = c("black", "red","blue","green")) +
   geom_text(aes(label = Description), hjust = -0.1, angle = 45, size = 3) +
-  scale_x_date(date_breaks = "months", date_labels = "%m/%d") +
-  labs(title = "Dissertation Timeline", x = "Month", y = "", color = "") +
+  scale_x_date(date_breaks = "months", date_labels = "%m/%y") +
+  labs(title = "Dissertation Timeline", x = "Month/year", y = "", color = "") +
   theme_minimal()+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 

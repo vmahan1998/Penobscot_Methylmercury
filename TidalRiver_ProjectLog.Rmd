@@ -68,32 +68,6 @@ The next step is to define suitability indicies for each species of interest for
 - Rainbow Smelt
 - Striped Bass
 
-## Literature Review for Hydrodynamic Model
+## 5/4/2023
 
-## Literature Review by Species
-
-### Alewives
-
-### American Eels
-
-### American Shad
-
-### Atlantic Sturgeon
-
-### Atlantic Salmon
-
-### Shortnose Sturgeonc
-
-### Blueback Herring
-
-### Rainbow Smelt
-
-### Striped Bass
-
-## Additonal Data Sources
-
-### Substrate Data Source
-
-### Vegetation Data Source
-
-## References
+Temperature, salinity, depth and other hydrodynamic data received from Kelsey Weir (Dr. Lauren Ross Student). Data was collected by sensors over time throughout the Penobscot. 

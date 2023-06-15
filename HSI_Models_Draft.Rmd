@@ -1,0 +1,81 @@
+---
+title: "Habitat Suitability Models for Diadromous Fish in the Northeast United States"
+author: "Vanessa Mahan"
+date: "2023-06-15"
+output: html_document
+---
+# Technical Report: Habitat Suitability Models for Diadromous Fish in the Northeast United States
+
+## Preface
+
+## Abstract
+
+## Introduction
+- Brief overview of diadromous fish in the northeast United States
+- Importance of habitat suitability models for fisheries management
+- Objectives of the report
+
+## Background
+- History of fisheries management for diadromous fish
+- Significance of the historic decline of diadromous fish populations
+- Conservation efforts and the need for habitat suitability models
+
+## Alewives
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## American Eels
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## American Shad
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Atlantic Salmon
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Atlantic Sturgeon
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Atlantic Tomcod
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Blueback Herring
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Rainbow Smelt
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Shortnose Sturgeon
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Striped Bass
+### Life cycle overview
+### Habitat requirements
+### Habitat suitability models
+
+## Synthesis and Discussion
+- Comparison of habitat suitability models across species
+- Implications for fisheries management and conservation
+- Future directions and potential improvements for habitat suitability models
+
+## Conclusion
+- Summary of key findings
+- Importance of habitat suitability models for diadromous fish management
+- Final remarks and call to action

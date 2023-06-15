@@ -1,0 +1,50 @@
+---
+title: "Tidal Non-linearities in the Penobscot"
+author: "Vanessa Mahan"
+date: "2023-06-13"
+output: html_document
+---
+Objective: Investigate the impact of tidal non-linearities on material transport using field observations.
+Tasks: 
+- Use two Acoustic Doppler Current Profilers (ADCPs) deployed near Bangor over 30 days during the dry and wet seasons to quantify barotropic overtides and overtides in current velocities.
+- Calibrate measurements of turbidity from acoustic backscatter from the ADCPs to suspended sediment concentrations using water samples.
+- Use Wavelet analysis to understand how the M4 oscillations contribute to subtidal flows and material transport during wet and dry seasons.
+
+Tidal Non-linearities:
+
+Definition and characteristics of tidal non-linearities.
+Theoretical background and models related to tidal non-linearities.
+Previous studies on the impact of tidal non-linearities on material transport.
+Acoustic Doppler Current Profilers (ADCPs):
+
+Principles and working mechanisms of ADCPs.
+Applications of ADCPs in studying tidal dynamics and material transport.
+Previous research utilizing ADCPs for quantifying barotropic overtides and overtides in current velocities.
+Barotropic Overtides:
+
+Definition and characteristics of barotropic overtides.
+Theoretical understanding and mathematical modeling of barotropic overtides.
+Previous studies investigating the influence of barotropic overtides on material transport.
+Turbidity and Suspended Sediment Concentrations:
+
+Relationship between turbidity and suspended sediment concentrations.
+Methods for calibrating turbidity measurements to suspended sediment concentrations.
+Previous research involving the calibration of acoustic backscatter from ADCPs to suspended sediment concentrations.
+Wavelet Analysis:
+
+#####################
+
+Introduction to wavelet analysis and its applications in environmental sciences.
+Wavelet-based techniques for analyzing tidal and subtidal flows.
+Previous studies employing wavelet analysis to study the contributions of M4 oscillations to subtidal flows and material transport.
+Material Transport and its Impacts:
+
+Processes and mechanisms involved in material transport in tidal environments.
+Implications and consequences of material transport on coastal ecosystems.
+Previous research investigating the impact of material transport on coastal areas.
+Seasonal Variability in Tidal Dynamics:
+
+Understanding the differences between wet and dry seasons in tidal dynamics.
+Seasonal variations in subtidal flows and material transport.
+Previous studies examining how seasonal changes influence tidal non-linearities and material transport.
+Remember to tailor the topics to your specific research focus and ensure that the literature you review is relevant to your objectives and research tasks.
