@@ -26,54 +26,276 @@ By incorporating the latest data, observations, and studies, the development of 
 The objectives of this paper are twofold. Firstly, we aim to synthesize the latest life cycle observations, studies, and data on diadromous fish species in the Northeastern United States, including Atlantic Salmon, Atlantic Sturgeon, Alewives, American Eels, American Shad, Atlantic Tomcod, Blueback Herring, Rainbow Smelt, Shortnose Sturgeon, and Striped Bass. By consolidating this wealth of information, we seek to enhance our understanding of their migratory behaviors, habitat requirements, and population dynamics, specifically focusing on the spawning and juvenile lifecycle stages. Secondly, we aim to develop updated habitat suitability index (HSI) models specific to each of these ten diadromous fish species, considering the unique habitat preferences and ecological needs during these critical stages. These models will incorporate the most recent data, observations, and studies, enabling more accurate assessments of habitat suitability and the identification of critical areas for each species' survival and reproduction. Through these objectives, we strive to contribute to the broader understanding of diadromous fish ecology, support effective fisheries management, and inform conservation strategies for the benefit of both the species and the coastal communities that depend on them.
 
 ## Alewives
+
+Alewives (Alosa pseudoharengus) have a slender, elongated body with a silvery coloration and a single, unnotched dorsal fin located towards the posterior part of their body. They possess a deeply forked tail fin and lack the distinctive dark spot behind the gill cover, a characteristic seen in some closely related species (Bigelow & Schroeder, 1953). Alewives also typically measure around 10 to 15 inches (25 to 38 centimeters) in length and weigh approximately 0.25 to 0.5 pounds (113 to 227 grams). However, there can be variations in size among different populations and geographic regions. 
+
+Alewives are widely distributed throughout the northeastern United States, inhabiting coastal areas from the Gulf of St. Lawrence in Canada to the mid-Atlantic region of the United States (citation needed). They are particularly abundant in freshwater rivers and estuaries along the Atlantic coast. Figure x shows the range of alewife habitat throughout the Northeast. Alewife populations can be found in various states, including Maine, New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, and Delaware, among others. They have historically undertaken extensive spawning migrations, ascending rivers and streams from their marine habitat to reach their preferred spawning grounds in freshwater systems (citation needed). Alewives also have cultural and historical importance, with their migrations and abundance having influenced the fishing practices and traditions of indigenous communities and coastal regions for centuries. The distribution of alewife populations are influenced by several factors, including the availability of suitable spawning habitats, water quality conditions, and the presence of appropriate food resources (citation needed). While the distribution of alewife populations can vary within this region, their importance as a migratory fish species in supporting ecological processes and serving as a vital resource in coastal communities. 
+
+```{r}
+# Required packages
+library(ggplot2)
+library(sf)
+
+# Read the alewife habitat data (replace "alewife_habitat.shp" with the actual file name and path)
+alewife_habitat <- st_read("alewife_habitat.shp")
+
+# Plot the map
+ggplot() +
+  geom_sf(data = alewife_habitat, fill = "lightblue", color = "black") +
+  coord_sf() +
+  labs(title = "Alewife Habitat Distribution",
+       subtitle = "Northeastern United States",
+       x = "Longitude", y = "Latitude")
+```
+
 ### Life cycle overview
+- describe life cycle
+
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## American Eels
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## American Shad
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Atlantic Salmon
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Atlantic Sturgeon
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Atlantic Tomcod
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
+
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Blueback Herring
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Rainbow Smelt
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Shortnose Sturgeon
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Striped Bass
+- description of species
+- map of geographic range
+- description of northeast distribution
+
 ### Life cycle overview
 ### Habitat requirements
+- spawning
+- juvenile
+
 ### Habitat suitability models
+#### Spawning
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
+
+#### Juvenile
+##### Depth
+##### Salinity
+##### Temperature
+##### Flow Velocity
+##### Sediment Composition
 
 ## Synthesis and Discussion
 - Comparison of habitat suitability models across species
