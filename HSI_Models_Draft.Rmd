@@ -47,13 +47,21 @@ By following this systematic approach, we generated habitat suitability models f
 
 Alewives are widely distributed throughout the northeastern United States, inhabiting coastal areas from the Gulf of St. Lawrence in Canada to the mid-Atlantic region of the United States (citation needed). They are particularly abundant in freshwater rivers and estuaries along the Atlantic coast. Figure x shows the range of alewife habitat throughout the Northeast. Alewife populations can be found in various states, including Maine, New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, and Delaware, among others. They have historically undertaken extensive spawning migrations, ascending rivers and streams from their marine habitat to reach their preferred spawning grounds in freshwater tidal systems (citation needed). The distribution of alewife populations is influenced by several factors, including the availability of suitable spawning habitats, water quality conditions, and the presence of appropriate food resources (citation needed). 
 
+### Life cycle overview
+
 The alewife, exhibits a complex life cycle characterized by distinct stages and behaviors. The spawning of alewives typically occurs in waves during the spring season, triggered by rising water temperatures and increasing day length (Able et al., 2020). Adult alewives migrate upstream from their marine environment to reach suitable spawning habitats. Upon arrival, they engage in impressive spawning runs, where large aggregations of individuals gather at spawning grounds.
 
-During the spawning process, male alewives release sperm into the water, while females deposit their adhesive eggs over gravel or other hard-substrate types. Alewife eggs are fertilized externally, and after spawning, both males and females return to the marine environment. The adhesive nature of the eggs helps them attach to the substrate, protecting them from being washed away by the current (Brown et al., 2000).
+During the spawning process, male alewives release sperm into the water, while females deposit their adhesive eggs over gravel or other hard-substrate types. Both males and females return to the marine environment after spawning. The adhesive nature of the eggs helps them attach to the substrate, protecting them from being washed away by the current (Brown et al., 2000).
 
-Following spawning, the eggs undergo a period of incubation, which typically lasts for several weeks. The exact duration depends on environmental conditions such as water temperature. Once the eggs hatch, the larvae emerge and begin their migration upstream where they will use the estuary habitat as a nursery until migrating out to sea (Pardue, 1983). Alewife larvae exhibit high rates of survival early on in higher concentrations of salinity (diMaggio 2015). 
+Following spawning, the eggs undergo a period of incubation, which typically lasts for several weeks (citation). Once the eggs hatch, the larvae emerge and slowly begin their migration upstream where they will use the estuary habitat as a nursery until migrating out to sea (Pardue, 1983). Alewife larvae exhibit high rates of survival early on in higher concentrations of salinity (diMaggio 2015). This characteristic enhances the fitness of alewife larvae in estuary environments where salinity concentrations can change rapidly.
 
-Existing suitability indices
+### Habitat requirements
+- spawning
+- juvenile
+
+### Habitat suitability models
+
+The Alewives Habitat Suitability models developed by Brown et al. (2000) and Pardue (1983), which relied on similar sources like Bigelow and Schroeder (1953), suffer from several limitations that render them inappropriate for current use. Firstly, these models are based solely on observations of Alewives' daytime behavior, neglecting their nocturnal activity patterns. However, studies have revealed that Alewives are primarily active at night, feeding and potentially spawning during these nocturnal periods (Janssen & Brandt, 1980; Aquinnah source?). Therefore, the exclusive reliance on daytime behavior in the models fails to capture the true habitat preferences and requirements of Alewives. Additionally, the existing models mainly incorporate variables such as temperature and depth, while disregarding other critical factors that influence Alewives' habitat selection, such as water flow, and life stage. Moreover, there is conflicting information within the models regarding the substrate, and depth preferences of Alewives, leading to inconsistencies and potential inaccuracies in predicting their habitat suitability. To overcome these limitations, updated models should incorporate a comprehensive understanding of Alewives' behavior, including their predominantly nocturnal activity, and consider a broader range of habitat variables to provide more reliable and precise assessments of their habitat suitability.
 
 ```{r}
 # Required packages
@@ -71,16 +79,6 @@ Existing suitability indices
 #       subtitle = "Northeastern United States",
 #       x = "Longitude", y = "Latitude")
 ```
-
-### Life cycle overview
-- describe life cycle
-
-### Habitat requirements
-- spawning
-- juvenile
-
-### Habitat suitability models
-
 #### Spawning
 ##### Depth
 ##### Salinity
