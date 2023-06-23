@@ -73,9 +73,64 @@ Previous studies have presented conflicting information regarding the substrate 
 
 - juvenile
 Janssen & Luebke, 2004 describes a significant observations of juvenile herring over rocky substrates.
+
 ### Habitat suitability models
 
 The Alewives Habitat Suitability models developed by Brown et al. (2000) and Pardue (1983), which relied on similar sources like Bigelow and Schroeder (1953), suffer from several limitations that render them inappropriate for current use. Firstly, these models are based solely on observations of Alewives' daytime behavior, neglecting their nocturnal activity patterns. However, studies have revealed that Alewives are primarily active at night, feeding and potentially spawning during these nocturnal periods (Janssen & Brandt, 1980; Aquinnah source?). Therefore, the exclusive reliance on daytime behavior in the models fails to capture the true habitat preferences and requirements of Alewives. Additionally, the existing models mainly incorporate variables such as temperature and depth, while disregarding other critical factors that influence Alewives' habitat selection, such as water flow, and life stage. Moreover, there is conflicting information within the models regarding the substrate, and depth preferences of Alewives, leading to inconsistencies and potential inaccuracies in predicting their habitat suitability. To overcome these limitations, updated models should incorporate a comprehensive understanding of Alewives' behavior, including their predominantly nocturnal activity, and consider a broader range of habitat variables to provide more reliable and precise assessments of their habitat suitability.
+
+#### Spawning Adult Alewives
+```{r, }
+par(mfrow=c(2, 3))
+
+# Depth Suitability Index
+depth_values <- seq(0, 30, length.out = 100)
+depth_suitability <- ifelse(depth_values <= 2, 0.5, ifelse(depth_values <= 10, 1, 0))
+plot(depth_values, depth_suitability, type = "l", xlab = "Depth (m)", ylab = "Suitability Index")
+title("Depth Suitability Index")
+
+# Salinity Suitability Index
+salinity_values <- seq(0, 30, length.out = 100)
+salinity_suitability <- ifelse(salinity_values < 15, 1, ifelse(salinity_values <= 20, 0.5, 0))
+plot(salinity_values, salinity_suitability, type = "l", xlab = "Salinity (psu)", ylab = "Suitability Index")
+title("Salinity Suitability Index")
+
+# Temperature Suitability Index
+temperature_values <- seq(0, 30, length.out = 100)
+temperature_suitability <- ifelse(temperature_values >= 12 & temperature_values <= 16, 1, ifelse(temperature_values > 16 & temperature_values <= 29.7, 0.5, 0))
+plot(temperature_values, temperature_suitability, type = "l", xlab = "Temperature (°C)", ylab = "Suitability Index")
+title("Temperature Suitability Index")
+
+# Flow Velocity Suitability Index
+velocity_values <- seq(0, 1, length.out = 100)
+velocity_suitability <- ifelse(velocity_values >= 0.06 & velocity_values <= 0.16, 1, ifelse(velocity_values < 0.3, 0.5, 0))
+plot(velocity_values, velocity_suitability, type = "l", xlab = "Flow Velocity (m/s)", ylab = "Suitability Index")
+title("Flow Velocity Suitability Index")
+
+# Substrate Suitability Index
+substrate <- c("Hard (gravel or rock)", "Sandy", "Soft (other substrates)")
+substrate_suitability <- c(0.8, 0.6, 0.7)
+barplot(substrate_suitability, names.arg = substrate, xlab = "Substrate", ylab = "Suitability Index")
+title("Substrate Suitability Index")
+```
+```{r}
+library(knitr)
+
+# Create the data for the table
+index <- c("Depth", "Salinity", "Temperature", "Flow Velocity", "Substrate")
+breakpoints <- c("Depth ≤ 2 m: 0.5\nDepth > 2 m: 1",
+                 "Salinity < 15 psu: 1\nSalinity ≤ 20 psu: 0.5",
+                 "Temperature 12-16°C: 1\nTemperature > 16°C & ≤ 29.7°C: 0.5",
+                 "Velocity 0.06-0.16 m/s: 1\nVelocity < 0.3 m/s: 0.5",
+                 "Hard (gravel or rock): 0.8\nSandy: 0.6\nSoft (other substrates): 0.7\nSuspended sediments: 0.9")
+
+# Create a data frame
+df <- data.frame(Index = index, Breakpoints = breakpoints)
+
+# Print the table using kable
+kable(df, format = "markdown")
+```
+
+
 
 ```{r}
 # Required packages
