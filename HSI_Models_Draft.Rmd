@@ -45,41 +45,86 @@ By following this systematic approach, we generated habitat suitability models f
 
 ## Alewives
 
-Alewives are widely distributed throughout the northeastern United States, inhabiting coastal areas from the Gulf of St. Lawrence in Canada to the mid-Atlantic region of the United States (citation needed). They are particularly abundant in freshwater rivers and estuaries along the Atlantic coast. Figure x shows the range of alewife habitat throughout the Northeast. Alewife populations can be found in various states, including Maine, New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, and Delaware, among others. They have historically undertaken extensive spawning migrations, ascending rivers and streams from their marine habitat to reach their preferred spawning grounds in freshwater tidal systems (citation needed). The distribution of alewife populations is influenced by several factors, including the availability of suitable spawning habitats, water quality conditions, and the presence of appropriate food resources (citation needed). 
+Alewives are widely distributed throughout the northeastern United States, inhabiting coastal areas from the Gulf of St. Lawrence in Canada to the mid-Atlantic region of the United States (citation needed). They are particularly abundant in freshwater rivers and estuaries along the Atlantic coast. Figure x shows the range of alewife habitat throughout the Northeast. Alewife populations can be found in various states, including Maine, New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, and Delaware, among others. They have historically undertaken extensive spawning migrations, ascending rivers and streams from their marine habitat to reach their preferred spawning grounds in freshwater tidal systems (citation needed). The distribution of alewife populations is influenced by several factors, including the availability of suitable spawning habitats, water quality conditions, and the presence of appropriate food resources (citation needed).
 
 ### Life cycle overview
 
-The alewife, exhibits a complex life cycle characterized by distinct stages and behaviors. The spawning of alewives typically occurs in waves during the spring season, triggered by rising water temperatures and increasing day length (Able et al., 2020). Adult alewives migrate upstream from their marine environment to reach suitable spawning habitats (Bigelow & Schroeder, 1953). Upon arrival, they engage in impressive spawning runs, where large aggregations of individuals gather at spawning grounds.
+The alewife exhibits a complex life cycle characterized by distinct stages and behaviors. The spawning of alewives typically occurs in waves during the spring season, triggered by rising water temperatures and increasing day length (Able et al., 2020). Adult alewives migrate upstream from their marine environment to reach suitable spawning habitats (Bigelow & Schroeder, 1953). Upon arrival, they engage in impressive spawning runs, where large aggregations of alewives gather at spawning grounds.
 
-During the spawning process, male alewives release sperm into the water, while females deposit their adhesive eggs over gravel or other hard-substrate types (Pardue, 1983; Janssen & Luebke, 2004). Both males and females return to the marine environment after spawning (Bigelow & Schroeder, 1953). The adhesive nature of the eggs helps them attach to the substrate, protecting them from being washed away by the current (Brown et al., 2000).
+During the spawning process, male alewives release sperm into the water, while females deposit their adhesive eggs over gravel or other hard-substrate types (Pardue, 1983; Janssen & Luebke, 2004). Both males and females return to the marine environment after spawning (Bigelow & Schroeder, 1953). The adhesive nature of the eggs helps them attach to the substrate, protecting them from being washed away by the current (Brown et al., 2000; Janssen & Brandt, 1980).
 
-Following spawning, the eggs undergo a period of incubation, which typically lasts for several days (Bigelow & Schroeder, 1953). Once the eggs hatch, the larvae emerge and slowly begin their migration upstream where they will use the estuary habitat as a nursery until migrating out to sea (Pardue, 1983). Alewife larvae exhibit high rates of survival early on in higher concentrations of salinity (diMaggio 2015)(Bigelow & Schroeder, 1953). This characteristic enhances the fitness of alewife larvae in estuary environments where salinity concentrations can change rapidly.
+After the spawning process, the eggs of alewives go through an incubation period that typically lasts for several days, as described by Bigelow & Schroeder (1953). Once the eggs hatch, the resulting larvae begin their migration upstream, gradually making their way towards the estuary habitat where they will reside as they grow. This estuary environment serves as a nursery for the juvenile alewife until they eventually migrate out to the sea, as documented by Pardue (1983). Furthermore, Kissil (1974) reported a remarkably low survival rate for the eggs spawned, with only a mere 0.0013% of the 80,000 eggs surviving to leave the spawning grounds as a young fish. Additionally, Kissil's research indicated that, on average, 2.88 fry successfully returned to the sea for each female alewife that entered the spawning grounds.
 
-### Habitat requirements
+### Spawning Adult Alewives
+
+#### Habitat Requirements 
 
 Spawning adult alewives exhibit specific preferences and requirements related to various habitat factors. Their annual migration during spawning is energetically demanding, with notable variations in behavior observed. Bigelow & Schroeder (1953) report that adult alewives migrate upstream and refrain from eating until their return downstream to productive tidal habitats. In contrast, Janssen & Brandt (1980) document fasting during the day and extensive feeding at night.
 
-Temperature plays a critical role in alewife spawning behavior. Optimal temperatures for successful spawning generally fall within the range of 12 to 16 degrees Celsius (Brown et al., 2000). Above 29.7 degrees Celsius, spawning success becomes limited (Pardue). Alewives typically migrate into freshwater streams when temperatures range from 8 to 18 degrees Celsius (Mather et al., 2012). Spawning ceases when temperatures exceed 27 degrees Celsius (Kissil, 1974), and suitable spawning temperatures broadly range from 10 to 22 degrees Celsius (Tyus, 1974; Pardue, 1983; Collette and Klein-MacPhee, 2002). Alewife eggs can develop within a temperature range of 11 to 28 degrees Celsius (Klauda et al., 1991).
+Temperature preferences of alewives during spawning exhibit variations across different studies; however, there is a general consensus that optimal temperatures for successful spawning fall within the range of 12 to 16 degrees Celsius (Brown et al., 2000). Above 29.7 degrees Celsius, spawning success becomes limited (Pardue). Alewives typically migrate into freshwater streams when water temperatures range from 8 to 18 degrees Celsius (Mather et al., 2012). Spawning ceases when water temperatures exceed 27 degrees Celsius (Kissil, 1974), and suitable spawning temperatures broadly span from 10 to 22 degrees Celsius (Tyus, 1974; Pardue, 1983; Collette and Klein-MacPhee, 2002). Alewife eggs can develop within a temperature range of 11 to 28 degrees Celsius (Klauda et al., 1991). It is important to note that temperature plays a critical role in alewife spawning behavior, and deviations from the optimal temperature range can significantly impact spawning success and the timing of migration.
 
 In terms of depth preferences, spawning adult alewives are generally known to favor depths ranging from MLT-10 meters (Brown et al., 2000). However, recent field observations conducted by Mather et al. (2012) have indicated that a significant proportion of alewives can be found in habitats shallower than 2 meters. These findings suggest that alewives are capable of spawning in both shallow and deep water environments, highlighting their adaptability in selecting suitable spawning locations (O'Connell & Angermeier, 1997).
 
-The current understanding of adult alewife spawning behavior indicates a deviance from the traditional assumption that anadromous species exclusively rely on freshwater environments for reproduction. Notably, Brown et al. (2000) emphasizes a heightened preference for habitats with salinity concentrations below 15 psu, while concentrations surpassing 20 psu are deemed unsuitable for spawning adults. This observed variability in spawning behavior suggests that alewives possess the ability to tolerate moderate levels of salinity during the reproductive process. Field studies have documented adult alewives engaging in spawning activities across a diverse array of estuarine habitats, including ponds within coastal systems and pond-like regions within coastal rivers and streams (Pardue 1983; Mullen et al. 1986; Collette and Klein-MacPhee 2002; Walsh et al. 2005). These habitats encompass various environments, such as ponds, oxbows, eddies, backwaters, stream pools, and flooded swamps, and are characterized by their typical attributes of deep and slow water flow (Pardue 1983; Mullen et al. 1986; Collette and Klein-MacPhee 2002; O’Connell and Angermeier 1997; Walsh et al. 2005). Consequently, this revised understanding challenges the longstanding notion that river herring are exclusively obligated to freshwater for spawning purposes, as highlighted by laboratory experiments conducted by DiMaggio et al. (2016) that demonstrate the notable survival rates of alewife embryos at salinities ranging up to and including 10‰.
-
-Temperature preferences of alewives during spawning exhibit variations across different studies; however, there is a general consensus that optimal temperatures for successful spawning fall within the range of 12 to 16 degrees Celsius (Brown et al., 2000). Above 29.7 degrees Celsius, spawning success becomes limited (Pardue). Alewives typically migrate into freshwater streams when water temperatures range from 8 to 18 degrees Celsius (Mather et al., 2012). Spawning ceases when water temperatures exceed 27 degrees Celsius (Kissil, 1974), and suitable spawning temperatures broadly span from 10 to 22 degrees Celsius (Tyus, 1974; Pardue, 1983; Collette and Klein-MacPhee, 2002). Notably, alewife eggs can develop within a temperature range of 11 to 28 degrees Celsius (Klauda et al., 1991).
+The current understanding of adult alewife spawning behavior indicates a deviance from the traditional assumption that anadromous species exclusively rely on freshwater environments for reproduction. Notably, Brown et al. (2000) emphasizes a heightened preference for habitats with salinity concentrations below 15 psu, while concentrations surpassing 20 psu are deemed unsuitable for spawning adults. This observed variability in spawning behavior suggests that alewives possess the ability to tolerate moderate levels of salinity during the reproductive process. Field studies have documented adult alewives engaging in spawning activities across a diverse array of estuarine habitats, including ponds within coastal systems and pond-like regions within coastal rivers and streams (Pardue 1983; Mullen et al. 1986; Collette and Klein-MacPhee 2002; Walsh et al. 2005). These habitats encompass various environments, such as ponds, oxbows, eddies, backwaters, stream pools, and flooded swamps, and are characterized by their typical attributes of deep and slow water flow (Pardue 1983; Mullen et al. 1986; Collette and Klein-MacPhee 2002; O’Connell and Angermeier 1997; Walsh et al. 2005). Consequently, this revised understanding challenges the longstanding notion that alewives are exclusively obligated to freshwater for spawning purposes, as highlighted by laboratory experiments conducted by DiMaggio et al. (2016) that demonstrate the notable survival rates of alewife embryos at salinities ranging up to and including 30‰.
 
 Flow velocity is a crucial factor influencing the spawning of alewives. O'Connell (1999) proposes that habitat patches with velocity values ranging from 0.06 m/s to 0.16 m/s have a 50% probability of alewife egg presence, while Pardue identifies velocities below 0.3 m/s as suitable habitat for spawning. It should be noted that higher flow velocities have the potential to displace recently spawned eggs from their initial spawning location, as indicated by Able et al.
 
-Previous studies have presented conflicting information regarding the substrate preferences of spawning adult alewives. It has been suggested that alewives prefer to spawn over hard substrates such as gravel and rock (Pardue, Brown et al., 2000), potentially due to the eggs' better adhesion to such substrates. However, Able et al. (2020) have documented observations of alewives spawning over sandy substrates, as well as the presence of eggs adhered to rocky substrate base types. In terms of sediment composition, alewives are known to spawn over a range of substrates, including gravel, sand, and other soft substrates (O’Connell & Angermeier, 1997). It is important to note that alewife spawning also displays high tolerance to suspended sediments (Pardue; Auld and Schubel, 1978). 
+Previous studies have presented conflicting information regarding the substrate preferences of spawning adult alewives. While some studies suggest that alewives prefer to spawn over hard substrates such as gravel and rock (Pardue, Brown et al., 2000), potentially due to the eggs' better adhesion to such substrates, recent research by Able et al. (2020) provides evidence supporting a broader range of substrate utilization by alewives. Able et al. 2020 documented observations of alewives spawning over sandy substrates along with egg presence near hard substrates, indicating this phenomena. Notebly, other studies support that alewives are known to spawn over a range of substrates, including gravel, sand, and other soft substrates (O’Connell & Angermeier, 1997).
 
-- juvenile
-Janssen & Luebke, 2004 describes a significant observations of juvenile herring over rocky substrates.
+#### Habitat suitability models
 
-### Habitat suitability models
+The Alewives Habitat Suitability models developed by Brown et al. (2000) and Pardue (1983), which relied on similar sources like Bigelow and Schroeder (1953), suffer from several limitations that render them inappropriate for current use. Firstly, these models are based solely on observations of Alewives' daytime behavior, neglecting their nocturnal activity patterns. However, studies have revealed that Alewives are primarily active at night, feeding and potentially spawning during these nocturnal periods (Janssen & Brandt, 1980; Janssen, 1978). Therefore, the exclusive reliance on daytime behavior in the models fails to capture the true habitat preferences and requirements of Alewives. Additionally, the existing models mainly incorporate variables such as temperature, depth, and substrate, while disregarding other critical factors that influence Alewives' habitat selection, such as water flow and life stage. Moreover, there is conflicting information within the models regarding the substrate and depth preferences of Alewives, leading to inconsistencies and potential inaccuracies in predicting their habitat suitability. To address these shortcomings, updated models need to incorporate a more comprehensive understanding of alewives' behavior and a broader range of habitat variables, enabling more reliable and precise assessments of their habitat suitability.
 
-The Alewives Habitat Suitability models developed by Brown et al. (2000) and Pardue (1983), which relied on similar sources like Bigelow and Schroeder (1953), suffer from several limitations that render them inappropriate for current use. Firstly, these models are based solely on observations of Alewives' daytime behavior, neglecting their nocturnal activity patterns. However, studies have revealed that Alewives are primarily active at night, feeding and potentially spawning during these nocturnal periods (Janssen & Brandt, 1980; Aquinnah source?). Therefore, the exclusive reliance on daytime behavior in the models fails to capture the true habitat preferences and requirements of Alewives. Additionally, the existing models mainly incorporate variables such as temperature and depth, while disregarding other critical factors that influence Alewives' habitat selection, such as water flow, and life stage. Moreover, there is conflicting information within the models regarding the substrate, and depth preferences of Alewives, leading to inconsistencies and potential inaccuracies in predicting their habitat suitability. To overcome these limitations, updated models should incorporate a comprehensive understanding of Alewives' behavior, including their predominantly nocturnal activity, and consider a broader range of habitat variables to provide more reliable and precise assessments of their habitat suitability.
+In light of the aforementioned limitations, updated suitability indices for spawning adult alewives have been developed to provide a more comprehensive understanding of their habitat preferences and requirements. These indices incorporate key factors influencing spawning success, including depth, salinity, temperature, flow velocity, and substrate. The suitability indices are presented in Figure X, which consists of five graphs representing each habitat factor.
 
-#### Spawning Adult Alewives
-```{r, }
+The depth suitability index indicates the preferred depth ranges for spawning adult alewives. Alewives exhibit higher suitability (index of 1) for depths ranging from 2 to 10 meters. Shallower depths below 2 meters and deeper depths exceeding 10 meters have a reduced suitability index of 0.5.
+
+The salinity suitability index reflects the salinity preferences of spawning adult alewives. Alewives show a heightened preference for salinity concentrations below 15 psu, resulting in a suitability index of 1. Salinity concentrations exceeding 20 psu are considered unsuitable, with a suitability index of 0.5.
+
+The temperature suitability index represents the optimal temperature range for successful spawning. Alewives exhibit a high suitability index of 1 within the temperature range of 12 to 16 degrees Celsius. Temperatures above 29.7 degrees Celsius have limited suitability, with a suitability index of 0.5.
+
+The flow velocity suitability index indicates the preferred flow velocity range for spawning. Habitat patches with flow velocities ranging from 0.06 to 0.16 m/s have a high suitability index of 1. Velocities below 0.3 m/s are also suitable, albeit with a reduced suitability index of 0.5.
+
+Lastly, the substrate suitability index assesses the preference for different substrate types. Alewives show a higher suitability index of 0.8 for hard substrates such as gravel or rock. Sandy substrates have a slightly lower suitability index of 0.6, while other soft substrates exhibit a suitability index of 0.7.
+
+These updated suitability indices provide valuable insights into the habitat requirements of spawning adult alewives and can inform decision-making regarding habitat management and conservation efforts.
+
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Habitat Range of Alewive in the Northeast United States", out.width="80%"}
+# Required packages
+#library(ggplot2)
+#library(sf)
+
+# Read the alewife habitat data (replace "alewife_habitat.shp" with the actual file name and path)
+#alewife_habitat <- st_read("alewife_habitat.shp")
+
+# Plot the map
+#ggplot() +
+#  geom_sf(data = alewife_habitat, fill = "lightblue", color = "black") +
+#  coord_sf() +
+#  labs(title = "Alewife Habitat Distribution",
+#       subtitle = "Northeastern United States",
+#       x = "Longitude", y = "Latitude")
+```
+
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Suitability Breakpoints", out.width="80%"}
+library(knitr)
+
+# Create the data for the table
+index <- c("Depth", "Salinity", "Temperature", "Flow Velocity", "Substrate")
+breakpoints <- c("Depth ≤ 2 m: 0.5\nDepth > 2 m: 1",
+                 "Salinity < 15 psu: 1\nSalinity ≤ 20 psu: 0.5",
+                 "Temperature 12-16°C: 1\nTemperature > 16°C & ≤ 29.7°C: 0.5",
+                 "Velocity 0.06-0.16 m/s: 1\nVelocity < 0.3 m/s: 0.5",
+                 "Hard (gravel or rock): 0.8\nSandy: 0.6\nSoft (other substrates): 0.7\nSuspended sediments: 0.9")
+
+# Create a data frame
+df <- data.frame(Index = index, Breakpoints = breakpoints)
+
+# Print the table using kable
+kable(df, format = "markdown")
+```
+
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Suitability Indices", out.width="80%"}
 par(mfrow=c(2, 3))
 
 # Depth Suitability Index
@@ -112,49 +157,10 @@ substrate_suitability <- c(0.8, 0.6, 0.7)
 barplot(substrate_suitability, names.arg = substrate, xlab = "Substrate", ylab = "Suitability Index")
 title("Substrate Suitability Index")
 ```
-```{r}
-library(knitr)
 
-# Create the data for the table
-index <- c("Depth", "Salinity", "Temperature", "Flow Velocity", "Substrate")
-breakpoints <- c("Depth ≤ 2 m: 0.5\nDepth > 2 m: 1",
-                 "Salinity < 15 psu: 1\nSalinity ≤ 20 psu: 0.5",
-                 "Temperature 12-16°C: 1\nTemperature > 16°C & ≤ 29.7°C: 0.5",
-                 "Velocity 0.06-0.16 m/s: 1\nVelocity < 0.3 m/s: 0.5",
-                 "Hard (gravel or rock): 0.8\nSandy: 0.6\nSoft (other substrates): 0.7\nSuspended sediments: 0.9")
-
-# Create a data frame
-df <- data.frame(Index = index, Breakpoints = breakpoints)
-
-# Print the table using kable
-kable(df, format = "markdown")
-```
-
-
-
-```{r}
-# Required packages
-#library(ggplot2)
-#library(sf)
-
-# Read the alewife habitat data (replace "alewife_habitat.shp" with the actual file name and path)
-#alewife_habitat <- st_read("alewife_habitat.shp")
-
-# Plot the map
-#ggplot() +
-#  geom_sf(data = alewife_habitat, fill = "lightblue", color = "black") +
-#  coord_sf() +
-#  labs(title = "Alewife Habitat Distribution",
-#       subtitle = "Northeastern United States",
-#       x = "Longitude", y = "Latitude")
-```
+- juvenile
+Janssen & Luebke, 2004 describes a significant observations of juvenile herring over rocky substrates.
 #### Spawning
-##### Depth
-##### Salinity
-##### Temperature
-##### Flow Velocity
-##### Sediment Composition
-
 #### Juvenile
 ##### Depth
 ##### Salinity
