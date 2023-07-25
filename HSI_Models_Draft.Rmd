@@ -159,8 +159,6 @@ title("Substrate Suitability Index")
 
 - juvenile
 Janssen & Luebke, 2004 describes a significant observations of juvenile herring over rocky substrates.
-#### Spawning
-#### Juvenile
 ##### Depth
 ##### Salinity
 ##### Temperature

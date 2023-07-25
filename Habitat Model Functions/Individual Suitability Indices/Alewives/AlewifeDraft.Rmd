@@ -160,7 +160,7 @@ par(mfrow=c(2,3), cex=1.0)
 Depth preference for juvenile alewives was very similar to spawning adults with a preference of 0-10 meters with no habitat suitability past 20 meters (Brown et al (2000)).
 
 #### Salinity
-Salinity preferences are higher for juvenile alewives than spawning adults. Juvenile alewives were listed to have a high preference for habitat with salinity concentrations >10 psu but show some suitability for freshwater tidal environments (Brown et al (2000)). Can even be found in concentraions up to 30 psu (Pardue).
+Salinity preferences are higher for juvenile alewives than spawning adults. Juvenile alewives were listed to have a high preference for habitat with salinity concentrations >10 psu but show some suitability for freshwater tidal environments (Brown et al (2000)). Can even be found in concentrations up to 30 psu (Pardue).
 
 #### Temperature
 Temperature preferences for juvenile alewives is a wider range than spawning adults. Juvenile alewives have a preference for temperatures from 6-30 degrees celcius with optimal suitability from 12-22 degrees Celsius (Brown et al (2000)). Pardue also verifies preference for lower temperatures around 6 degrees Celsius. Temperature also verified in where 100% survival is shown for 15 psu and decreased survival is experiences around 0 psu and 30 psu (DiMaggio 2015).

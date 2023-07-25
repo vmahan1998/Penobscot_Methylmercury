@@ -1,7 +1,5 @@
 ---
-title: 'Assessing the Tidal Influence of Methylmercury Movement in the Penobscot Watershed:
-  A Coupled Modeling Approach to Identify Contaminated Fish Habitats for Nine Diadromous
-  Species'
+title: "Investigating the Influence of Tidal Non-linearities on Material Transport and Contaminated Sediment for Diadromous Fish Habitat in a Tidal River System"
 author: "Vanessa Mahan"
 date: "2023-04-02"
 output:
@@ -9,14 +7,4 @@ output:
   html_document: default
   pdf_document: default
 ---
-# Abstract {-}
-
-The Penobscot River Watershed is an important ecological region in Maine that supports a range of fish species, including many diadromous species. However, decades of industrial activity have resulted in high levels of mercury contamination in the river, which could be affecting fish populations. The goal of this research is to develop an integrated model of diadromous fish habitat suitability and mercury contamination in the Penobscot Watershed, with the aim of identifying areas of potential habitat for native species where high concentrations of methylmercury are present.
-
-The first research task will focus on modeling the movement of contaminated sediment and the concentration of methylmercury for the Penobscot Watershed. This will be achieved using the sediment transport module of Delft3D to develop a hydrodynamic model. This type of model will estimate the geographic location and concentrations of methylmercury and describe the tidal influence as it relates to movement of the contaminated sediment throughout the watershed. By understanding the movement of sediment and concentration of methylmercury, we can better understand how it may be affecting fish populations and identify areas of potential concern.
-
-For the second research task, suitability indices will be developed for fish habitat in the Penobscot Watershed. This task will involve a comprehensive literature review, as well as utilize available data and adapt existing suitability indices for similar species in other regions. Indices will be developed for ten diadromous fish species found in the Penobscot Watershed (alewives _Alosa psuedoharengus_, American eels _Anguilla rostrata_, American shad _A. sapidissima_, Atlantic salmon _Salmo salar_, Atlantic sturgeon _Acipenser oxyrinchus_, Atlantic Tomcod _Microgadus tomcod_, Shortnose Sturgeon _Acipenser brevirostrum_, Blueback Herring _A. aestivalis_, Rainbow Smelt _Osmerus mordax_, and Striped Bass _Morone saxatillis_), and will include separate indices for spawning and juvenile habitats. The suitability indices will then be used in to identify areas of potential high fish habitat suitability within the Penobscot River.
-
-For the third research task, a coupled model approach will be applied to the Penobscot River using the models developed in the first two research tasks. The habitat suitability indices and the sediment transport model will be applied to the study area using observations of hydrodynamic and ecological data for the region. Using the outputs of the hydrodynamic model developed as inputs for the habitat suitability model, the geographic location and range of fish habitat with high concentrations of methylmercury can be identified. Coupled use of the models, can identify areas where contaminated habitats may be adversely affecting the restoration and recovery of fish populations.
-
-In summary, this research aims to develop an integrated model of fish habitat suitability and mercury contamination for the Penobscot River. The overall objective is to understand the tidal influence on the movement of methylmercury throughout the watershed, understand the geographic location and range of fish habitat within the Penobscot River, and identify contaminated habitats that could be affecting the recovery of native fish populations.
+This dissertation aims to comprehensively examine the relationship between sediment transport dynamics and diadromous fish habitat in the Penobscot River, with a focus on understanding the potential implications of sediment contamination. The research objectives include investigating the impact of tidal non-linearities on material transport through field observations using Acoustic Doppler Current Profilers (ADCPs), developing a suite of models that quantifies the geographic range and location of spawning and juvenile diadromous fish habitat using habitat suitability indices, and consider the potential impacts of this transport phenomena when the sediment is contaminated for diadromous fish habitat using data analysis and habitat modeling. The significance of this project lies in its contribution to understanding the intricate interactions between sediment transport dynamics and diadromous fish habitat in this vital coastal ecosystem, informing conservation efforts and promoting the preservation of diadromous fish populations and their habitats, and safeguarding the health and resilience of the Penobscot River ecosystem.
