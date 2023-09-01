@@ -4,45 +4,22 @@ author: "Vanessa Mahan"
 date: "2023-04-01"
 output: html_document
 ---
-## Depth
+### Premigratory Juvenile Alewives and Larvae
 
-```{r}
-#depth_range <- c(0.305,0.61)#in meters
-depth <- (0.305+1)/2 #average between min & max
-depth_suitability_curve <- function(depth) {
-  # Define the optimal range for depth
-  optimal_depth_range <- c(1, 10) # meters
+Premigratory juvenile alewives and larvae exhibit distinct habitat preferences and requirements, playing a crucial role in influencing their survival and growth. The abundance and successful development of these young alewives are influenced by multiple factors, including variations in river flow and temperature, as demonstrated in studies by Tommasi et al., (2015) and Walsh et al. (2005). Additionally, other essential factors such as salinity, depth, and substrate can affect the spatial distribution and range of habitat (Pardue, 1983). Considering these ecological factors is essential for effective alewife management, supporting informed decision-making and ensuring the preservation and sustainability of alewife populations in critical habitats.
 
-  # Define the lower and upper thresholds for depth
-  lower_threshold <- 0 # meters
-  upper_threshold <- 20 # meters
+Temperature is a critical factor influencing the distribution, behavior, and early development of premigratory juvenile alewives.Tommasi et al., 2015 reported optimal temperatures for juvenile alewife development within the range of 20°C to 23°C, and describes the total suitability for juvenile and larvae recruitment from 16°C-26°C. Deviations from this range can impact growth rates and overall health. Notably, alewife larvae exhibit enhanced survival rates in environments with temperatures ranging from 13°C to 15°C. Furthermore, alewife eggs typically have an incubation time of approximately 80 hours, with hatching observed to take around 94 hours at water temperatures ranging from 20°C to 21°C (68 to 70 degrees Fahrenheit) (Fay et al., 1983). In a study by Able et al., 2020, juveniles collected in during field research were captured when temperatures were >20 °C. Juvenile river herring do not survive temperatures of 3°C or less (Otto et al. 1976). Additionally, hatching success is optimal around 20.8°C, significantly decreases at 26.7°C-26.8°C, and stops completely around 29.7°C (Pardue, 1983). Juvenile alewives exhibit optimal growth at around 26°C (Pardue, 1983). Alewife eggs can develop within a temperature range of 11 to 28 degrees Celsius (Klauda et al., 1991). Ensuring suitable water temperatures is vital for successful juvenile development and larvae hatching, as well as influences the availability of suitable habitat for the early life stages of alewives. Maintaining optimal temperature conditions during this life stage is crucial to promote successful development and prepare juveniles for their eventual migration to sea. Temperature preferences for juvenile alewives is a wider range than spawning adults. Juvenile alewives have a preference for temperatures from 6-30 degrees celcius with optimal suitability from 12-22 degrees Celsius (Brown et al (2000)). Pardue also verifies presence at lower temperatures around 6 degrees Celsius. 
 
-  # Compute the habitat suitability score based on depth
-  if (depth < lower_threshold | depth > upper_threshold) {
-    suitability_score <- 0
-  } else if (depth >= optimal_depth_range[1] & depth <= optimal_depth_range[2]) {
-    suitability_score <- 1
-  } else if (depth < optimal_depth_range[1]) {
-    suitability_score <- (depth - lower_threshold) / (optimal_depth_range[1] - lower_threshold)
-  } else if (depth > optimal_depth_range[2]) {
-    suitability_score <- (upper_threshold - depth) / (upper_threshold - optimal_depth_range[2])
-  }
+Depth preferences of premigratory juvenile alewives are relatively shallow compared to their adult counterparts. Depth preference for juvenile alewives display a preference of 0-10 meters with no habitat suitability past 20 meters (Brown et al (2000)(Höök et al., 2008). Research conducted by Pardue 1983 indicates that juveniles prefer depths ranging from 0.5 to 5 meters. In Lake Ontario, Canada, early post-hatch larvae were most abundant in shallow areas less than 3 meters in depth, with larger larvae progressively occupying deeper habitats (Ingel, 2013). Previous reports on the Margaree River indicate that alewife larvae in Nova Scotia are predominately found in areas less than 2 meters deep and that the abundance of juvenile alewives increases around five meters deep (Gibson & Myers, 2003). These shallow-water habitats provide shelter from predators and allow juveniles to access suitable food sources, ensuring their proper growth and development before their downstream migration.
 
-  return(suitability_score)
-}
-plot_depth_suitability_curve <- function() {
-  # Define the range of depths to plot
-  depths <- seq(0, 20, by = 0.01)
+Salinity is another crucial factor influencing the habitat preferences of premigratory juvenile alewives. Research by Turner & Limburg, 2016 and Able et al., 2020 indicates that juvenile alewives typically prefer estuarine habitats with salinity concentrations ranging from 0.5 to 25 psu. These moderate salinity levels provide an optimal balance between freshwater and marine environments, creating suitable conditions for juvenile growth and survival. Higher salinity concentrations, exceeding 20 psu, may limit their habitat suitability, impacting their feeding and physiological processes. Conversely, exposure to higher salinities, up to 30 psu, has been observed to have minimal adverse effects on juvenile alewives' health and survival where 100% survival is shown for 15 psu and decreased survival is experiences around 0 psu and 30 psu (DiMaggio 2015).Understanding the salinity requirements of premigratory juvenile alewives is essential for managing and preserving estuarine habitats that support their early life stages. Maintaining suitable salinity levels in these habitats ensures the healthy development and successful transition of juveniles as they prepare for their migration to the sea. Salinity preferences are higher for juvenile alewives than spawning adults. Juvenile alewives were listed to have a high preference for habitat with salinity concentrations >10 psu but show some suitability for freshwater tidal environments (Brown et al (2000)). Can even be found in concentrations up to 30 psu (Pardue).
 
-  # Compute the habitat suitability score for each depth value
-  suitability_scores <- sapply(depths, depth_suitability_curve)
+Flow velocity plays a significant role in shaping the development and survival of premigratory juvenile alewives (Tommasi et al., 2015). According to Pardue 1983, When the surface flow ranges from 0 to 0.3 m/s, conditions are deemed suitable for larvae, and egg development. Research by Richkus, 1975 highlights that juvenile alewives show a preference for habitats with flow velocities ranging from 0.05 to 0.17 m/s. O'Connell (1999) proposes that habitat patches with velocity values ranging from 0.06 m/s to 0.16 m/s have a 50% probability of alewife egg presence. Larval alewives were consistently found in water velocities up to approximately 0.12 m/s but not in faster currents (Ingel, 2013). It should be noted that higher flow velocities also have the potential to displace recently spawned eggs from their initial spawning location, as indicated by Able et al 2020. These sluggish flow rates offer suitable conditions for juveniles to conserve energy while efficiently foraging for food. Higher flow velocities may hinder their ability to maintain their position in the water column and access critical food resources (Haro et al., 2004). 
 
-  # Plot the suitability scores as a curve
-  plot(depths, suitability_scores, type = "l", xlab = "Depth (meters)", ylab = "Habitat Suitability", ylim=c(0,1),
-       main = "Habitat Suitability Curve for Depth Parameter")
-}
-plot_depth_suitability_curve()
-```
+Substrate preferences of premigratory juvenile alewives are diverse, reflecting their adaptability to various environments. Previous studies mention that juvenile alewives show a preference for sandy substrates (Fay et al., 1983), but more recent studies by Able et al., 2020 and Brown et al., 2000 report that juveniles utilize a wide range of substrates (e.g., including sand, gravel, and sub-aquatic vegetation). Such substrate diversity provides juveniles with ample shelter and food sources, supporting their growth and survival during this crucial life stage. Further, observations in Janssen & Luebke, 2004 support that the juvenile alewives may display a preference for rocky substrate. Seagrass coverage plays a vital role in the habitat of premigratory juvenile alewives. Although Ingel, 2013 mentions alewife larvae may avoid areas with aquatic vegetation, research by Laney, 1997 and Smith & Rulifson, 2015 demonstrates that seagrass beds provide essential nursery habitat, offering refuge from predators and abundant food sources. Seagrass beds enhance water quality by stabilizing sediments and promoting nutrient cycling, creating a favorable environment for juvenile alewives to thrive. Vegetated areas are also known to provide important overwintering habitat (Killgore et al., 1988).
+
+Overall, understanding the habitat requirements of premigratory juvenile alewives, including the importance of seagrass coverage, is essential for ensuring their successful transition to adulthood and subsequent migration to sea. Maintaining suitable temperature conditions, shallow-water habitats, optimal flow velocities, diverse substrate options, and preserving seagrass beds are critical for supporting the healthy development and resilience of these young alewives as they prepare for their migratory journey.
+
 ## Salinity
 
 ```{r}
