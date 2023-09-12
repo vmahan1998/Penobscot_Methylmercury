@@ -3,8 +3,8 @@ title: "Alewife Habitat Suitability Models"
 author: "Vanessa Mahan, Justin Stevens"
 date: "2023-04-19"
 output:
-  word_document: default
   pdf_document: default
+  word_document: default
 bibliography: Lit.R_Alewives.bib
 ---
 # Alewives
