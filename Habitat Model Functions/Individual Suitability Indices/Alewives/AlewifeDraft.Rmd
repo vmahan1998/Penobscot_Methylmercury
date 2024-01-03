@@ -1,10 +1,12 @@
 ---
 title: "Alewife Habitat Suitability Models"
 author: "Vanessa Mahan, Justin Stevens"
-date: "2023-04-19"
+date: "2023-10-02"
 output:
-  pdf_document: default
   word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
 bibliography: Lit.R_Alewives.bib
 ---
 # Alewives
@@ -67,7 +69,7 @@ To address these shortcomings, updated models should encompass a more comprehens
 
 The updated HSI model for spawning adult alewives introduces several noteworthy breakpoints that distinguish it from previous models. These breakpoints provide a more refined understanding of alewife habitat preferences and suitability.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Temperature Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Temperature Suitability Indices", out.width="80%", warning=FALSE}
 # Load the ggplot2 library
 library(ggplot2)
 library(gridExtra)
@@ -130,7 +132,7 @@ invisible(dev.off())
 knitr::include_graphics("Fig01.Adult_Alewife_Temp_HSI.jpeg")
 ```
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Temperature Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Temperature Suitability Indices", out.width="80%", warning=FALSE}
 library(dplyr)
 library(knitr)
 library(kableExtra)
@@ -166,7 +168,7 @@ column_spec(5,width_min = "20em")
 
 In contrast to earlier models, the new HSI model delineates mean daily temperature preferences with greater accuracy. While previous models often employed broader temperature categories, the current model introduces finer distinctions. For instance, the new model identifies a specific range (12 to 16 degrees Celsius) where alewives exhibit peak suitability, providing a more accurate depiction of their thermal requirements for successful spawning. Moreover, the model highlights an upper mean daily temperature limit (27 degrees Celsius) where suitability drastically decreases, emphasizing the importance of maintaining suitable thermal conditions in spawning habitats.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Depth Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Depth Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("0-2","2-10","10-20","20-50","50-100","100+",
                "NA",
                "0-MLT","MLT-3","3-10","10-20","20-50","50-100"), ncol=1, byrow=TRUE)
@@ -199,7 +201,7 @@ column_spec(5,width_min = "20em")
 
 The updated model also offers more detailed depth preferences. Previous models might have employed generalized depth categories, but the new model introduces distinct depth ranges. This allows for a more refined assessment of habitat suitability. For instance, the new model specifies a peak suitability range (2 to 10 meters), reflecting the depth preferences of spawning adult alewives more accurately. Additionally, it identifies a depth threshold (100 meters) beyond which habitats are unsuitable for spawning.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Average Salinity Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Average Salinity Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("0-0.5","0.5-5","5-15","15-20","20+",
                "0-6","6-14","14-20","20+",
                "0-0.5","0.5-5","5-10","10-15","15-20","20-25","25-30"), ncol=1, byrow=TRUE)
@@ -230,9 +232,9 @@ column_spec(4,width_min = "20em") %>%
 column_spec(5,width_min = "20em")
 ```
 
-The new HSI model also refines the depiction of alewife salinity preferences. Unlike earlier models, which may have had narrow salinity categories, the updated model provides a more nuanced view. It pinpoints a specific range (0 to 5 psu) where alewives exhibit the highest suitability, aligning closely with empirical data. Moreover, it designates a clear upper limit (15 psu) where suitability declines significantly, indicating the importance of maintaining lower salinity levels in suitable habitats.
+The new HSI model also refines the depiction of alewife salinity preferences. Unlike earlier models, which may have had narrow salinity categories, the updated model provides a more nuanced view. It pinpoints a specific range (0 to 5 psu) where alewives exhibit the highest suitability, aligning closely with empirical data. Moreover, it designates a clear upper limit (20 psu) where suitability declines significantly, indicating the importance of maintaining lower salinity levels in suitable habitats.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Flow Velocity Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Flow Velocity Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("0-0.3","0.3-1.5","1.5-3.5","3.5-4.5","4.5+",
                "NA",
                "NA"), ncol=1, byrow=TRUE)
@@ -265,7 +267,7 @@ column_spec(5,width_min = "20em")
 
 The new model enhances our understanding of alewife flow velocity preferences. While previous models might have used less specific flow velocity categories, the updated model introduces distinct ranges. For example, it highlights a range (0 to 0.3 meters per second) where alewives demonstrate the highest suitability and extends moderate suitability to a broader range (0.3 to 1.5 meters per second), offering a more defined view of their flow velocity requirements. Additionally, it designates an upper threshold (4.5 meters per second) beyond which habitat would be considered unsuitable, in line with observed behaviors.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Substrate Type Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Spawning Adult Alewife Substrate Type Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("soft substrate","hard substrate","present SAV","absent SAV",
                "NA",
                "NA"), ncol=1, byrow=TRUE)
@@ -302,7 +304,7 @@ Substrate preferences remain a crucial aspect of spawning habitat for alewives. 
 
 To shed light on their habitat preferences and support effective conservation and management strategies, an in-depth Habitat Suitability Index (HSI) model has been established. This model meticulously dissects key parameters, including temperature, depth, salinity, flow velocity, and substrate, providing precise insights into the conditions necessary for their well-being.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Temperature Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Temperature Suitability Indices", out.width="80%", warning=FALSE}
 # Load the ggplot2 library
 library(ggplot2)
 
@@ -365,7 +367,7 @@ invisible(dev.off())
 knitr::include_graphics("Fig02.Juv_Alewife_Temp_HSI.jpeg")
 ```
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Temperature Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Temperature Suitability Indices", out.width="80%", warning=FALSE}
 library(dplyr)
 library(knitr)
 library(kableExtra)
@@ -401,7 +403,7 @@ column_spec(5,width_min = "20em")
 
 The temperature parameter in the HSI model for non-migratory juvenile alewife and larvae delineates mean daily temperature preferences with greater accuracy. It highlights a suitability range between 3 and 11 degrees Celsius, indicating their ability to thrive and over-winter in cooler waters. Optimal conditions are observed within the 17 to 22 degrees Celsius range, aligning closely with the temperature regimes of their native habitats. The model's upper limit at 29.7 degrees Celsius defines the critical importance of understanding suitable thermal conditions to support the growth and survival of juvenile alewives and larvae.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Depth Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Depth Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("0-0.5", "0.5-3", "3-5", "3-10", "10-20", "20-50","50+",
                "NA",
                "0-MLT","MLT-3","3-10","10-20","20-50","50-100"), ncol=1, byrow=TRUE)
@@ -434,7 +436,7 @@ column_spec(5,width_min = "20em")
 
 Depth preferences play a crucial role in the habitat suitability of non-migratory juvenile alewife and larvae. The updated model offers distinct depth ranges, allowing for a refined assessment of their habitat requirements. Peak suitability between 2 and 10 meters is highlighted, signifying the affinity by juvenile alewife and larvae for relatively shallow waters. This depth preference aligns with their ecological niche, where access to food resources and shelter is optimal. Furthermore, the model designates a depth threshold at 20 meters, emphasizing that habitats beyond this depth are unsuitable for these life stages.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Average Salinity Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Average Salinity Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("0-0.5", "0.5-5", "5-10", "10-15", "15-20", "20-25", "25-30", "30-35", "35+",
                "0-6","6-14","14-20","20+",
                "0-0.5","0.5-5","5-10","10-15","15-20","20-25","25-30"), ncol=1, byrow=TRUE)
@@ -467,7 +469,7 @@ column_spec(5,width_min = "20em")
 
 Salinity is a vital factor in the habitat suitability of non-migratory juvenile alewife and larvae, and the HSI model provides detailed insights. It highlights a specific range of 0.5 to 15 (psu) where these life stages exhibit the highest suitability. This preference closely corresponds to their native estuarine and freshwater habitats. Additionally, the model sets a clear upper limit at 30 psu, emphasizing the moderate effects of higher salinity levels on their suitability. Maintaining brackish conditions in suitable habitats is essential for the successful development of juvenile alewives and larvae.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Flow Velocity Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Flow Velocity Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("0-0.05", "0.05-0.12", "0.12-0.17", "0.17-0.3", "0.3-0.5", "0.5-1.0","1.0-1.5", "1.5+",
                "NA",
                "NA"), ncol=1, byrow=TRUE)
@@ -500,7 +502,7 @@ column_spec(5,width_min = "20em")
 
 The new model defines Flow velocity preferences, which are essential for the habitat suitability of non-migratory juvenile alewife and larvae, and the HSI model provides specific velocity ranges. It designates a suitability range between 0.05 and 0.12 meters per second, highlighting their preference for relatively calm waters. Moderate suitability extends to a broader range of 0.0 to 0.3 meters per second, reflecting their adaptability to slightly faster currents. Beyond 1.5 meters per second, the model sets an upper threshold, indicating that habitats with higher flow velocities would be considered unsuitable. Understanding these flow velocity preferences is crucial for conserving habitats that support these life stages.
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Substrate Type Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", fig.cap="Non-Migratory Juvenile Alewife and Larvae Substrate Type Suitability Indices", out.width="80%", warning=FALSE}
 data= matrix(c("soft substrate","hard substrate","present SAV","absent SAV",
                "NA",
                "NA"), ncol=1, byrow=TRUE)
@@ -534,7 +536,7 @@ column_spec(5,width_min = "20em")
 The updated model also distinguishes between soft and hard substrate types, recognizing their significance. Soft substrates are associated with moderate suitability, while hard substrates are considered highly suitable. Additionally, the model acknowledges the presence or absence of sub-aquatic vegetation (SAV) as a parameter, recognizing the ecological importance of vegetation in these habitats. This comprehensive approach to substrate preferences ensures that a variety of habitat types is considered when managing and conserving suitable environments for non-migratory juvenile alewife and larvae.
 
 ### Figures & Tables
-```{r, echo= FALSE, include=TRUE, fig.align = "center", opts_chunk = FALSE, fig.cap="Spawning Adult Alewife Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", opts_chunk = FALSE, fig.cap="Spawning Adult Alewife Suitability Indices", out.width="80%", warning=FALSE}
 library(dplyr)
 library(knitr)
 library(kableExtra)
@@ -594,7 +596,7 @@ column_spec(4,width_min = "20em") %>%
 column_spec(5,width_min = "20em")
 ```
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", opts_chunk = FALSE, fig.cap="Suitability Indices Non-migratory Juvenile Alewife and Larvae", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", opts_chunk = FALSE, fig.cap="Suitability Indices Non-migratory Juvenile Alewife and Larvae", out.width="80%", warning=FALSE}
 
 data= matrix(c('A','','','','','','B','','','','','','','C','','','','','','','','','D','','','','','','','','E','','',''), ncol=1, byrow=TRUE)
 
@@ -653,7 +655,7 @@ column_spec(4,width_min = "20em") %>%
 column_spec(5,width_min = "20em")
 ```
 
-```{r, echo= FALSE, include=TRUE, fig.align = "center", opts_chunk = FALSE, fig.cap="Spawning Adult Alewife Suitability Indices", out.width="80%"}
+```{r, echo= FALSE, include=TRUE, fig.align = "center", opts_chunk = FALSE, fig.cap="Spawning Adult Alewife Suitability Indices", out.width="80%", warning=FALSE}
 #Create data frame for suitability curves
 riparian0 <- data.frame(matrix(NA, nrow=5, ncol=6))
 colnames(riparian0) <- c("Ins.Buffer.Width.Avg.m", "Index.Instream", "Bio.Buffer.Width.Avg.m", "Index.Biodiversity", "Buffer.Width.Min.m", "Index.Connectivity")
@@ -667,6 +669,5 @@ riparian0$Buffer.Width.Min.m <- c()
 riparian0$Index.Connectivity <- c()
 
 ```
-
 
 ## References

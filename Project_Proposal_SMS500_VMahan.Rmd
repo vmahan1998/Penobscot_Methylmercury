@@ -1,0 +1,81 @@
+---
+title: "Project Proposal"
+author: "Vanessa Mahan"
+date: "2023-10-12"
+output:
+  word_document:
+    fig_caption: yes
+  html_document: default
+  pdf_document: default
+bibliography:
+  - SubtidalFlowsResearch.bib
+  - PhDResearch.bib
+biblio-style: apalike
+link-citations: no
+---
+Project Proposal: Understanding the Interaction Between Sediment Transport Dynamics and Diadromous Fish Habitat in the Penobscot River
+
+Why:
+The Penobscot River, located in Maine, is a crucial river system impacted by both tidal forces and human-induced complexities, and in the past, the river was inhabited by an abundance of diadromous fish species, such as alewives (Alosa psuedoharengus), American eels (Anguilla rostrata), American shad (A. sapidissima), Atlantic salmon, Atlantic sturgeon (Acipenser oxyrinchus), shortnose sturgeon (Acipenser brevirostrum), blueback herring (A. aestivalis), rainbow smelt (Osmerus mordax), and striped bass (Morone saxatillis)[@trinko_lake_evaluating_2012]. The Penobscot River was designated Critical Habitat for Atlantic Sturgeon in 1973 (Endangered Species Act 1973). Atlantic Sturgeon and the co-evolved populations of diadromous species in Maine experienced a heavy decline in abundance as a result of dam construction, overfishing, and habitat degradation [@saunders_maines_2006]. Restoration of these habitats was prioritized through the Penobscot River Restoration Project (PRRP), but populations of diadromous fish species still face challenges surrounding habitat quality throughout the tidal river habitat [@trinko_lake_evaluating_2012].
+
+Notably, historical mercury contamination, originating from the now-closed HoltraChem facility, has imbued the river sediment with persistent pollution, necessitating a meticulous understanding of its hydrodynamic processes [@yeager_mercury_2018]. HoltraChem, a chloride-alkaline manufacturing plant on the Penobscot River near Orrington, Maine, was in operation between 1967 and 2000 [@rudd_penobscot_2009].
+
+Within this context, the river's hydrodynamics are subject to two key influences: oscillatory flows, or tidal flows, and subtidal flows. Tidal flows, inherently oscillatory, trigger a series of effects governed by nonlinear interactions (Scott, 1994). In contrast, subtidal flows, operating over timescales beyond dominant tides, are shaped by multiple factors such as tidal nonlinearities, density variations, river discharge, and wind patterns [@valle-levinson_introduction_2022]. Subtidal flows play a pivotal role in the long-term transport of materials, including pollutants and sediment, dictating the river's ecological health [@olabarrieta_effects_2018].
+
+In traditional prismatic tidal channels with uniform geometry, weakly nonlinear conditions result in net seaward flows throughout the water column [@ianniello_tidally_1977]. However, the Penobscot River's unique characteristics, including a generally shallow riverbed with lateral depth variations, introduce complexities. Here, a laterally sheared subtidal flow pattern emerges, orchestrating the exchange of water within the estuary [@li_tidally_1997].
+
+New insights into the Penobscot River's dynamics, discovered in a recent field study, revealed a dynamic "mobile pool" of contaminated sediment, stretching across a 20-kilometer section within the estuary [@rockwell_geyer_mobile_2018]. The mobility of this sediment pool exhibits a seasonal pattern, influenced by processes linked to sediment resuspension and entrapment, which respond to changing flow patterns associated with discharge conditions. During times of high discharge, downstream sediment transport becomes prominent, while low discharge conditions prompt the movement of sediment upstream. This dynamic interplay between discharge conditions and subtidal flows not only governs seasonal shifts in the net export of materials from the Penobscot River but also exerts a profound impact on the overall recovery dynamics of the estuary. Consequently, these dynamics have a direct bearing on the quality and suitability of diadromous fish habitats within the river, as they influence the distribution and characteristics of sediment, which in turn affect the ecological health and conditions that diadromous fish depend on for spawning and survival.
+
+The Penobscot River is a crucial ecosystem for diadromous fish species, and understanding the relationship between sediment transport dynamics and their habitat is essential. If funded, this research aims to investigate the implications of sediment contamination on diadromous fish habitat in the Penobscot River. With a focus on tidal distortion and the transport of suspended sediments, this project addresses a critical need for the preservation of diadromous fish populations and the ecosystem's health.
+
+What:
+The goal of this project is to understand the impact of tidal distortion on sediment transport and address the necessary impact on diadromous fish habitat in the Penobscot River.
+
+The project's objectives are as follows:
+
+Objective 1: Investigate Tidal Distortion
+
+- Examine the impact of tidal distortion on material transport through field observations.
+- Understand how tidal fluctuations influence sediment transport dynamics in the Penobscot River.
+
+Objective 2: Identify Diadromous Fish Habitat within the Penobcot River
+
+- Quantify the geographic range and location of spawning and juvenile diadromous fish habitat for the Northeast United States.
+- Identify environmental parameters crucial for diadromous fish habitat selection.
+- Map the range and location of fish habitat for diadromous fish in the Penobscot River
+
+Objective 3: Analyzing Contaminated Sediment Impacts
+
+- Consider the potential impacts of sediment contamination on diadromous fish habitat using data analysis and habitat modeling.
+- Investigate the influence of sediment contamination on the vitality and resilience of diadromous fish populations and their habitats. This investigation will employ an agent-based model to estimate the extent of exposure to contaminated sediment during their annual migrations.
+
+Outputs:
+The project will yield multiple outputs, including:
+
+- At least three scientific journal articles
+- Presentations at scientific conferences
+- Suite of habitat models for ten diadromous fish species
+- Map of habitat extents for Diadromous fish species in the Penobscot River
+- Agent-Based model on contaminate exposure for migrating fish
+
+Where:
+The research will be conducted at the University of Maine in Orono, ME. The project study site contains two locations along the Penobscot River in Bangor, ME and Hampden, ME. The project results will have global relevance for fisheries management, particularly in the Northeast United States.
+
+Who:
+Vanessa Mahan, PhD Student, University of Maine, USACE ERDC, ORISE Fellow.
+
+The committee includes experts with extensive experience:
+
+- Dr. Kimberly Huguenard, Graduate Advisor and coastal engineering expert, University of Maine
+- Dr. Steven Kyle McKay, with 20+ years as a research civil engineer working in ecological modeling and water resources, USACE ERDC.
+- Dr. Gayle Zydlewski, Diadromous Fish expert, University of Maine, NOAA SeaGrant.
+- Dr. Damien Brady, specializes in water quality and modeling, University of Maine
+- Mr. Justin Stevens, Project Location expert for the Penobscot River, NOAA SeaGrant.
+
+How:
+By utilizing a combination of field observations, habitat modeling, and advanced analytical techniques, this project aims to comprehensively explore the interaction between sediment transport dynamics and diadromous fish habitat in the Penobscot River while considering the implications of sediment contamination. The collaborative efforts of the project team will lead to a deeper understanding of this critical ecosystem, benefiting fisheries management, conservation efforts, and the health of diadromous fish populations. The outcomes of this project will:
+
+- Inform conservation efforts aimed at preserving diadromous fish populations and their critical habitats.
+- Evaluate the influence of tidal distortion on suspended sediment transport and sediment dynamics
+- Promote the sustainable management of the Penobscot River ecosystem.
+- Safeguard the health and resilience of the river's ecosystem and its diadromous fish populations.
